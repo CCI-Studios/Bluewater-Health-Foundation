@@ -1,0 +1,16 @@
+name = Bluewater Health Foundation
+description = Bluewater Health Foundation Custom
+core = 7.x
+
+;scripts[] = js/filename.js
+
+stylesheets[all][] = css/screen.css
+
+regions[navigation] = Navigation
+regions[header] = Header
+regions[help] = Help
+regions[content] = Content
+regions[sidebar] = Sidebar
+regions[widgets] = Widgets
+regions[footer] = Footer
+
