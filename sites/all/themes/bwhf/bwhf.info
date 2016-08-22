@@ -6,11 +6,11 @@ core = 7.x
 
 stylesheets[all][] = css/screen.css
 
-regions[navigation] = Navigation
+regions[navigation] = Navigation1
+regions[navigation2] = Navigation2
+regions[navigation_fixed] = Navigation Fixed
 regions[header] = Header
 regions[help] = Help
 regions[content] = Content
-regions[sidebar] = Sidebar
-regions[widgets] = Widgets
 regions[footer] = Footer
 

@@ -1,0 +1,27 @@
+body
+{
+  background: $blue;
+}
+.page-wrapper
+{
+  background: white;
+}
+
+p, ul, ol
+{
+  margin-bottom: 0.8em;
+  
+  &:last-child
+  {
+    margin-bottom: 0;
+  }
+}
+
+ul, ol
+{
+  margin-left: 25px;
+}
+.menu
+{
+  margin: 0;
+}

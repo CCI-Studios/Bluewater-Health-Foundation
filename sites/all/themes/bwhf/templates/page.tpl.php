@@ -73,55 +73,49 @@
  */
 ?>
 
-  <div id="page-wrapper"><div><div>
+  <div class="page-wrapper"><div><div>
 
-    <div id="navigation"><div><div>
+    <div class="navigation"><div><div>
+      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="logo">
+        <img src="<?php print $base_path.$directory; ?>/img/logo-bwhf.svg" alt="<?php print $site_name; ?>" />
+      </a>
       <?php print render($page['navigation']); ?>
+      <?php print render($page['navigation2']); ?>
     </div></div></div>
 
-    <div id="header"><div><div>
-
-      <?php if ($logo): ?>
-        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-        </a>
-      <?php endif; ?>
-
+    <div class="header"><div><div>
       <?php print render($page['header']); ?>
+    </div></div></div>
+    
+    <div class="navigation-fixed"><div><div>
+      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="logo-fixed">
+        <img src="<?php print $base_path.$directory; ?>/img/logo-leaf-white.svg" alt="<?php print $site_name; ?>" />
+      </a>
+      <?php print render($page['navigation_fixed']); ?>
+    </div></div></div>
 
-    </div></div></div> <!-- /#header -->
+    <div class="main-wrapper"><div><div>
 
-    <div id="main-wrapper"><div><div>
-
-      <div id="content"><div><div>
+      <div class="content"><div><div>
         <a id="main-content"></a>
         <?php print render($title_prefix); ?>
-        <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
+        <?php if ($title): ?><h1 class="title" class="page-title"><?php print $title; ?></h1><?php endif; ?>
         <?php print render($title_suffix); ?>
         <?php print $messages; ?>
         <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
         <?php print render($page['help']); ?>
         <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
         <?php print render($page['content']); ?>
-      </div></div></div> <!-- /#content -->
+      </div></div></div>
 
-      <?php if ($page['sidebar']): ?>
-        <div id="sidebar"><div><div>
-          <?php print render($page['sidebar']); ?>
-        </div></div></div> <!-- /#sidebar -->
-      <?php endif; ?>
-
-    </div></div></div> <!-- /#main, /#main-wrapper -->
-
-    <div id="widgets"><div><div>
-      <?php print render($page['widgets']); ?>
     </div></div></div>
 
-    <div id="footer"><div><div>
+    <div class="footer"><div><div>
+      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="logo-footer">
+        <img src="<?php print $base_path.$directory; ?>/img/logo-bwhf-white.svg" alt="<?php print $site_name; ?>" />
+      </a>
       <?php print render($page['footer']); ?>
-      <div id="copyright">&copy; EXAMPLE <?php print date('Y'); ?></div>
-      <div id="site-by-cci">Site by <a href="http://ccistudios.com" target="_blank">CCI Studios</a></div>
-    </div></div></div> <!-- /#footer -->
+    </div></div></div>
 
 
-  </div></div></div> <!-- /#page-wrapper -->
+  </div></div></div>

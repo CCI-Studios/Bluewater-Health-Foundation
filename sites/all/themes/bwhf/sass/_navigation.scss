@@ -1,0 +1,271 @@
+.navigation
+{
+  background: white;
+  padding: 20px 0;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 1001;
+  
+  & > div
+  {
+    @include container;
+    @include clearfix;
+  }
+  
+  a
+  {
+    text-decoration: none;
+    
+    &:hover, &:focus
+    {
+      text-decoration: underline;
+    }
+  }
+}
+.logo
+{
+  float: left;
+  
+  img
+  {
+    display: block;
+  }
+}
+.region-navigation,
+.region-navigation2
+{
+  float: right;
+}
+.block__hospital-link
+{
+  float: left;
+  margin-right: 20px;
+  
+  .content a
+  {
+    color: #bfbfbf;
+    text-transform: uppercase;
+    line-height: 28px;
+    font-size: 15px;
+    font-weight: 600;
+    
+    &:hover, &:focus
+    {
+      text-decoration: none;
+      border-bottom: 2px solid #bfbfbf;
+    }
+  }
+}
+.block__search
+{
+  float: left;
+  margin-right: 20px;
+  
+  form
+  {
+    display: block;
+    height: 26px;
+    position: relative;
+    border: 1px solid $blue;
+    border-radius: 2px;
+  }
+  h2, label
+  {
+    position: absolute;
+    left: -99999px;
+  }
+  input[type=text]
+  {
+    display: block;
+    border: 0;
+    background: white;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 12px;
+    margin-left: 32px;
+    font-size: 16px;
+    width: 180px;
+  }
+  input[type=submit]
+  {
+    display: block;
+    font-size: 0;
+    background: url(../img/search.svg) no-repeat center center;
+    border: 0;
+    cursor: pointer;
+    width: 32px;
+    height: 26px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+}
+.block__social-menu
+{
+  float: left;
+  
+  .content
+  {
+    ul
+    {
+      list-style: none;
+    }
+    li
+    {
+      list-style: none;
+      display: inline-block;
+      margin-right: 14px;
+      vertical-align: top;
+      
+      &.last
+      {
+        margin-right: 0;
+      }
+    }
+    a
+    {
+      font-size: 0;
+      display: block;
+      height: 28px;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    .fb
+    {
+      background-image: url(../img/social-fb-blue.svg);
+      width: 15px;
+    }
+    .tw
+    {
+      background-image: url(../img/social-tw-blue.svg);
+      width: 30px;
+    }
+    .yt
+    {
+      background-image: url(../img/social-yt-blue.svg);
+      width: 30px;
+    }
+  }
+}
+.block__main-menu
+{
+  float: left;
+  margin-top: 10px;
+  
+  .content
+  {
+    ul
+    {
+      list-style: none;
+    }
+    li
+    {
+      list-style: none;
+
+      &:hover > ul
+      {
+        display: block;
+      }
+      
+      ul
+      {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        box-shadow: 0 4px 4px rgba(0,0,0,0.3);
+        
+        li
+        {
+          display: block;
+          
+          &.last a
+          {
+            border-bottom: 0;
+          }
+        }
+        a
+        {
+          display: block;
+          color: white;
+          background: $blue;
+          line-height: 1;
+          padding: 10px 15px;
+          border-bottom: 2px solid white;
+          font-weight: 600;
+          font-size: 14px;
+          width: 135px;
+          
+          &:hover, &:focus
+          {
+            text-decoration: none;
+            background: white;
+            color: $blue;
+          }
+        }
+      }
+    }
+    & > ul > li
+    {
+      display: inline-block;
+      margin-right: 6px;
+      position: relative;
+      padding-bottom: 22px;
+      margin-bottom: -22px;
+      
+      &.last
+      {
+        margin-right: 0;
+      }
+      
+      & > a
+      {
+        color: $blue;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 15px;
+        display: block;
+        padding: 0 5px;
+        height: 30px;
+        line-height: 30px;
+        
+        &:hover, &:focus
+        {
+          border-bottom: 2px solid $blue;
+          margin-bottom: -2px;
+          text-decoration: none;
+        }
+      }
+    }
+    }
+}
+.block__give-now
+{
+  float: left;
+  margin-top: 10px;
+  margin-left: 20px;
+  
+  .give-now
+  {
+    display: block;
+    width: 122px;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 15px;
+    background: $blue;
+    font-size: 15px;
+    font-weight: 600;
+    
+    &:hover, &:focus
+    {
+      background: $green;
+      text-decoration: none;
+    }
+  }
+}
