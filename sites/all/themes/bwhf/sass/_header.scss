@@ -1,0 +1,75 @@
+.view-headers
+{
+  .view-content
+  {
+    text-align: center;
+    color: white;
+    
+    a
+    {
+      color: white;
+    }
+  }
+  .background
+  {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 480px;
+    position: relative;
+    
+    & > div
+    {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      padding: 0 25px;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+  }
+  .title
+  {
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0,0,0,0.6);
+    
+    h2
+    {
+      font-size: 3em;
+      line-height: 1;
+    }
+  }
+  .field-name-body
+  {
+    text-shadow: 0 0 10px rgba(0,0,0,0.6);
+    font-weight: 600;
+    
+    h3
+    {
+      font-size: 2em;
+    }
+  }
+  .give-now
+  {
+    display: inline-block;
+    width: 180px;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+    background: $blue;
+    border-radius: 15px;
+    text-decoration: none;
+    margin-top: 10px;
+    
+    &:hover, &:focus
+    {
+      text-decoration: none;
+      background: $green;
+    }
+  }
+}

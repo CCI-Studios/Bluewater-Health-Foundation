@@ -2,8 +2,10 @@ name = Bluewater Health Foundation
 description = Bluewater Health Foundation Custom
 core = 7.x
 
-;scripts[] = js/filename.js
+scripts[] = js/slick.min.js
+scripts[] = js/header.js
 
+stylesheets[all][] = css/slick.css
 stylesheets[all][] = css/screen.css
 
 regions[navigation] = Navigation1
