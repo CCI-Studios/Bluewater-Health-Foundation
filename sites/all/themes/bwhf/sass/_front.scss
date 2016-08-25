@@ -1,0 +1,258 @@
+.block__home-welcome
+{
+  @include clearfix;
+  clear: both;
+  padding: 30px 0;
+  
+  & > div
+  {
+    @include container;
+  }
+  .icon
+  {
+    float: left;
+    width: 33.333%;
+    margin-top: 25px;
+    
+    a
+    {
+      display: block;
+      padding-top: 100px;
+      text-align: center;
+      background-repeat: no-repeat;
+      background-position: top center;
+      color: $blue;
+      text-decoration: none;
+      font-size: 1.5em;
+      font-weight: 400;
+      
+      &:before
+      {
+        content: "";
+        display: block;
+        position: absolute;
+        left: -999999px;
+      }
+    }
+  }
+  .icon__give-now a
+  {
+    background-image: url(../img/icon-give-now-blue.svg);
+    
+    &:hover, &:before
+    {
+      background-image: url(../img/icon-give-now-green.svg);
+    }
+  }
+  .icon__stories a
+  {
+    background-image: url(../img/icon-stories-blue.svg);
+    
+    &:hover, &:before
+    {
+      background-image: url(../img/icon-stories-green.svg);
+    }
+  }
+  .icon__urgent-needs a
+  {
+    background-image: url(../img/icon-urgent-needs-blue.svg);
+    
+    &:hover, &:before
+    {
+      background-image: url(../img/icon-urgent-needs-green.svg);
+    }
+  }
+}
+
+.block__home-dream-home
+{
+  clear: both;
+  padding: 50px 0;
+  background: url(../img/dream-home.jpg) no-repeat center center;
+  background-size: cover;
+  color: white;
+  
+  & > div
+  {
+    @include container;
+  }
+  .content
+  {
+    text-shadow: 0 0 5px rgba(0,0,0,0.8);
+    font-weight: 600;
+    font-size: 0.9em;
+    
+    p
+    {
+      line-height: 1.75;
+    }
+    img
+    {
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+  }
+  .view-prizes
+  {
+    display: block;
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 30px auto 0 auto;
+    border-radius: 15px;
+    background: $blue;
+    font-weight: 600;
+    text-shadow: none;
+    
+    &:hover
+    {
+      background: $green;
+    }
+  }
+}
+
+
+.block__home-news,
+.block__home-events
+{
+  @include container;
+  padding: 40px 25px;
+  
+  h2
+  {
+    text-align: center;
+    font-size: 2.25em;
+    margin-bottom: 25px;
+  }
+}
+.block__home-news
+{
+  border-bottom: 2px solid $blue;
+}
+.view--home-teasers
+{
+  .view-content
+  {
+    @include clearfix;
+  }
+  .views-row
+  {
+    float: left;
+    width: 32%;
+    margin-right: 2%;
+    position: relative;
+    overflow: hidden;
+    
+    &:before
+    {
+      content: "";
+      display: block;
+      padding-bottom: 66.666%;
+    }
+    &:nth-child(3n+3)
+    {
+      margin-right: 0;
+    }
+    
+    a
+    {
+      display: block;
+      text-decoration: none;
+      color: white;
+      
+      &:after
+      {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: $green;
+        opacity: 0;
+        z-index: 1;
+        transition: opacity 0.25s;
+      }
+      &:hover
+      {
+        &:after
+        {
+          opacity: 0.5;
+        }
+        img
+        {
+          left: -2.5%;
+          top: -2.5%;
+          width: 105%;
+        }
+      }
+    }
+    img
+    {
+      display: block;
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 0.25s;
+    }
+    .content
+    {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      padding: 0 20px;
+      z-index: 2;
+      text-align: center;
+      text-shadow: 0 0 4px rgba(0,0,0,0.75);
+    }
+    .field-title
+    {
+      font-size: 1.5em;
+      font-weight: 600;
+      line-height: 1;
+      
+      &:after
+      {
+        content: "";
+        display: block;
+        margin: 8px auto;
+        width: 100px;
+        border-bottom: 1px solid white;;
+      }
+    }
+    .submitted
+    {
+      font-weight: 600;
+    }
+  }
+  .read-more
+  {
+    margin: 35px auto 0 auto;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9em;
+    text-align: center;
+    display: block;
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    background: $blue;
+    border-radius: 15px;
+    
+    &:hover
+    {
+      background: $green;
+    }
+  }
+}

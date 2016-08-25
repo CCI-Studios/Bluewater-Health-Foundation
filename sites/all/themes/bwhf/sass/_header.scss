@@ -4,6 +4,7 @@
   {
     text-align: center;
     color: white;
+    border-bottom: 2px solid $blue;
     
     a
     {
@@ -39,6 +40,8 @@
     {
       font-size: 3em;
       line-height: 1;
+      color: white;
+      font-weight: bold;
     }
   }
   .field-name-body

@@ -96,17 +96,27 @@
 
     <div class="main-wrapper"><div><div>
 
-      <div class="content"><div><div>
+      <div class="main-content <?php if ($page['sidebar']): ?>main-content__with-sidebar<?php endif; ?>"><div><div>
         <a id="main-content"></a>
-        <?php print render($title_prefix); ?>
-        <?php if ($title): ?><h1 class="title" class="page-title"><?php print $title; ?></h1><?php endif; ?>
-        <?php print render($title_suffix); ?>
-        <?php print $messages; ?>
-        <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
-        <?php print render($page['help']); ?>
-        <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
+        <div class="pre-content">
+          <?php print render($title_prefix); ?>
+          <?php if ($title && !drupal_is_front_page()): ?>
+            <h1 class="page-title"><?php print $title; ?></h1>
+          <?php endif; ?>
+          <?php print render($title_suffix); ?>
+          <?php print $messages; ?>
+          <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+          <?php print render($page['help']); ?>
+          <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
+        </div>
         <?php print render($page['content']); ?>
       </div></div></div>
+      
+      <?php if ($page['sidebar']): ?>
+        <div class="sidebar"><div><div>
+          <?php print render($page['sidebar']); ?>
+        </div></div></div>
+      <?php endif; ?>
 
     </div></div></div>
 

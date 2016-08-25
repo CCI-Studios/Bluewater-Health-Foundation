@@ -166,20 +166,27 @@
 
       &:hover > ul
       {
-        display: block;
-      }
-      
-      ul
-      {
-        display: none;
-        position: absolute;
-        left: 0;
-        top: 100%;
-        box-shadow: 0 4px 4px rgba(0,0,0,0.3);
+        opacity: 1;
         
         li
         {
           display: block;
+        }
+      }
+      
+      ul
+      {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        box-shadow: 0 4px 4px rgba(0,0,0,0.3);
+        opacity: 0;
+        transition: opacity 0.2s;
+        
+        li
+        {
+          display: none;
           
           &.last a
           {
@@ -220,7 +227,8 @@
         margin-right: 0;
       }
       
-      & > a
+      & > a,
+      & > .nolink,
       {
         color: $blue;
         text-transform: uppercase;
@@ -230,7 +238,13 @@
         padding: 0 5px;
         height: 30px;
         line-height: 30px;
-        
+      }
+      & > .nolink
+      {
+        cursor: default;
+      }
+      & > a
+      {
         &:hover, &:focus
         {
           border-bottom: 2px solid $blue;
@@ -239,7 +253,7 @@
         }
       }
     }
-    }
+  }
 }
 .block__give-now
 {

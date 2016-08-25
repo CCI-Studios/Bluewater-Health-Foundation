@@ -18,3 +18,9 @@
     clear: both;
   }
 }
+
+.block-system-main,
+.pre-content
+{
+  @include container;
+}

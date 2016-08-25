@@ -14,5 +14,6 @@ regions[navigation_fixed] = Navigation Fixed
 regions[header] = Header
 regions[help] = Help
 regions[content] = Content
+regions[sidebar] = Sidebar
 regions[footer] = Footer
 
