@@ -19,8 +19,53 @@
   }
 }
 
-.block-system-main,
-.pre-content
+.not-front .main-wrapper
 {
   @include container;
+  @include clearfix;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.main-content__with-sidebar
+{
+  width: 65%;
+  margin-right: 5%;
+  float: left;
+}
+.sidebar
+{
+  width: 30%;
+  float: left;
+  
+  h2
+  {
+    color: $blue;
+    font-weight: 400;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+  
+  .view--home-teasers
+  {
+    .views-row
+    {
+      float: none;
+      width: auto;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+  .block
+  {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid $blue;
+    
+    &:last-child
+    {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: 0;
+    }
+  }
 }
