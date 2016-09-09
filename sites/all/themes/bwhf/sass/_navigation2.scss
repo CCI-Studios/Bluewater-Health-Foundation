@@ -7,8 +7,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  // transform: translateY(-72px);
+  right: 0;
   z-index: 1000;
   
   & > div
@@ -30,6 +29,16 @@
     }
   }
 }
+.navbar-tray-open.navbar-vertical.navbar-fixed
+{
+  .navigation-fixed
+  {
+    left: 240px;
+    left: 15rem;
+    top: 39px;
+  }
+}
+
 .region-navigation-fixed
 {
   float: right;

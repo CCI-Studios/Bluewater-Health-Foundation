@@ -1,0 +1,229 @@
+.block__view-staff h2
+{
+  text-align: center;
+  font-size: 2.25em;
+  margin-bottom: 35px;
+}
+.block-views-staff-block-staff
+{
+  border-bottom: 2px solid $blue;
+  margin-bottom: 40px;
+}
+.view-staff
+{
+  @include clearfix;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 50px;
+  // max-height: none !important;
+  
+  .views-row:nth-child(3n+1) .staff__teaser
+  {
+    clear: left;
+  }
+  .clearfix:after
+  {
+    display: none;
+  }
+}
+.staff__teaser
+{
+  width: 33.33%;
+  float: left;
+  text-align: center;
+  margin-bottom: 35px;
+  
+  &
+  {
+    @media screen and (max-width: 720px)
+    {
+      width: 50%;
+    }
+  }
+  
+  & > div
+  {
+    width: 180px;
+    margin: 0 auto;
+  }
+  
+  a
+  {
+    color: $blue;
+    text-decoration: none;
+    
+    &:hover .view-profile
+    {
+      opacity: 1;
+    }
+  }
+  .field-photo
+  {
+    position: relative;
+    margin-bottom: 10px;
+    
+    img
+    {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .view-profile
+  {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    color: white;
+    background: $green;
+    background: rgba(0,111,83,0.55);
+    line-height: 180px;
+    font-size: 1.5em;
+    font-weight: bold;
+    z-index: 10;
+    transition: all 0.2s;
+  }
+  .field-name
+  {
+    font-size: 1.2em;
+    
+    &:after
+    {
+      content: "";
+      display: block;
+      width: 100px;
+      margin: 6px auto;
+      border-bottom: 1px solid $blue;;
+    }
+  }
+  .field-title
+  {
+    font-size: 0.95em;
+    line-height: 1;
+  }
+}
+.staff__profile
+{
+  position: relative;
+  
+  .field-photo
+  {
+    float: left;
+    margin-right: 35px;
+    
+    img
+    {
+      display: block;
+    }
+  }
+  .content
+  {
+    padding-left: 215px;
+    color: $blue;
+  }
+  .field-name
+  {
+    padding-right: 80px;
+    
+    .field-item
+    {
+      font-size: 2.25em;
+      font-weight: 500;
+      line-height: 1;
+      padding-bottom: 4px;
+      border-bottom: 1px solid $blue;
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+  }
+  .field-title
+  {
+    font-size: 1.15em;
+    margin-bottom: 8px;
+  }
+  .field-email,
+  .field-phone
+  {
+    font-size: 1.15em;
+    
+    .field-label,
+    .field-items
+    {
+      display: inline-block;
+    }
+  }
+  .field-body
+  {
+    margin: 12px 0;
+    color: black;
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+  .field-why-i-support
+  {
+    .field-label
+    {
+      font-size: 1.15em;
+    }
+    .field-item
+    {
+      color: $green;
+      font-size: 1.15em;
+      font-style: italic;
+      padding: 0 65px;
+      text-align: center;
+      position: relative;
+      
+      &:before,
+      &:after
+      {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        width: 35px;
+        height: 22px;
+        margin-top: -11px;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+      &:before
+      {
+        left: 0;
+        background-image: url(../img/quote-open.svg);
+      }
+      &:after
+      {
+        right: 0;
+        background-image: url(../img/quote-close.svg);
+      }
+    }
+  }
+  .close
+  {
+    color: $blue;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    padding-right: 30px;
+    background: url(../img/x.svg) no-repeat right center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.15em;
+  }
+  .clearfix:after
+  {
+    display: none;
+  }
+}
+
+.path-staff .page-title
+{
+  display: none;
+}

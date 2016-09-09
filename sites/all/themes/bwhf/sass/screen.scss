@@ -2,12 +2,13 @@
 @import "variables";
 @import "typography";
 @import "main";
+@import "forms";
 @import "layout";
 @import "navigation";
 @import "navigation2";
 @import "header";
 @import "footer";
-@import "forms";
-@import "front";
-@import "responsive";
 
+@import "pages/front";
+@import "pages/news";
+@import "pages/staff";

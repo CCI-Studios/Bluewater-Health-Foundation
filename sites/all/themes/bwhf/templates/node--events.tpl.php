@@ -95,6 +95,13 @@ $image_url = file_create_url($content['field_image']['#items'][0]['uri']);
       </div>
     </div>
   </a>
+<?php else: ?>
+  <div class="content"<?php print $content_attributes; ?>>
+    <p class="submitted">
+      <?php print render($content['field_date']); ?>
+    </p>
+    <?php print render($content['body']); ?>
+  </div>
 <?php endif; ?>
 
 </div>

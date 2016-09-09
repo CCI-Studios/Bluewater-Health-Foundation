@@ -1,0 +1,75 @@
+@mixin button_small
+{
+  display: block;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  text-align: center;
+  width: 140px;
+  height: 30px;
+  line-height: 30px;
+  background: $blue;
+  font-weight: 600;
+  border-radius: 15px;
+  border: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  
+  &:hover
+  {
+    background: $green;
+  }
+}
+.button__small
+{
+  @include button_small;
+}
+input[type=submit],
+button[type=submit]
+{
+  @include button_small;
+}
+
+input[type=text],
+input[type=email],
+input[type=password]
+{
+  border: 1px solid $blue;
+  border-radius: 2px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 6px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 1em;
+}
+
+.for-checkbox
+{
+  input
+  {
+    position: absolute;
+    left: -99999px;
+  }
+  span:before
+  {
+    content: "";
+    display: inline-block;
+    vertical-align: top;
+    width: 15px;
+    height: 15px;
+    border: 1px solid $blue;
+    border-radius: 2px;
+    margin-right: 6px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 12px auto;
+    cursor: pointer;
+  }
+  input:checked + span:before
+  {
+    background-image: url(../img/checkbox.svg);
+  }
+}

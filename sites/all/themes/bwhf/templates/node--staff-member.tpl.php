@@ -79,29 +79,43 @@
  *
  * @ingroup themeable
  */
-$image_url = file_create_url($content['field_image']['#items'][0]['uri']);
+$image_url = file_create_url($content['field_staff_photo']['#items'][0]['uri']);
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
-<?php if ($view_mode == "teaser"): ?>
-  <a href="<?php print $node_url;?>" class="background">
-    <img src="<?php print $image_url;?>" alt=""/>
-    <div class="content"<?php print $content_attributes; ?>>
-      <div class="field-title">
-        <?php print $title; ?>
+  <?php if ($view_mode == "teaser"): ?>
+    <div class="staff__teaser"><div>
+      <a href="<?php print $node_url;?>">
+        <div class="field-photo">
+          <img src="<?php print $image_url;?>" alt="<?php print $title; ?>"/>
+          <div class="view-profile">View Profile</div>
+        </div>
+        <div class="content"<?php print $content_attributes; ?>>
+          <div class="field-name"><?php print $title; ?></div>
+          <div class="field-title"><?php print render($content['field_title']); ?></div>
+        </div>
+      </a>
+    </div></div>
+  <?php else: ?>
+    <div class="staff__profile"><div>
+      <a href="/staff" class="close">Back</a>
+      <div class="field-photo">
+        <img src="<?php print $image_url;?>" alt="<?php print $title; ?>"/>
       </div>
-      <div class="submitted">
-        <?php print_r(date("F j, Y", $node->created)); ?>
+      <div class="content"<?php print $content_attributes; ?>>
+        <div class="field-name"><div class="field-item"><?php print $title; ?></div></div>
+        <div class="field-title"><?php print render($content['field_title']); ?></div>
+        <div class="field-email"><?php print render($content['field_email']); ?></div>
+        <div class="field-phone"><?php print render($content['field_phone']); ?></div>
+        <div class="field-body"><?php print render($content['body']); ?></div>
+        <div class="field-why-i-support">
+          <?php if (isset($content['field_why_i_support_bwhf'])): ?>
+            <div class="field-label">Why I Support BWHF</div>
+            <?php print render($content['field_why_i_support_bwhf']); ?>
+          <?php endif; ?>
+        </div>
       </div>
-    </div>
-  </a>
-<?php else: ?>
-  <div class="content"<?php print $content_attributes; ?>>
-    <p class="submitted">
-      <?php print_r(date("F j, Y", $node->created)); ?>
-    </p>
-    <?php print render($content['body']); ?>
-  </div>
-<?php endif; ?>
+    </div></div>
+  <?php endif; ?>
 
 </div>

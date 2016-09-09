@@ -1,0 +1,104 @@
+.entity-pager,
+.pager
+{
+  clear: both;
+  list-style: none;
+  margin: 1.5em 0 0 0;
+  
+  .inactive
+  {
+    display: none;
+  }
+  a
+  {
+    @include button_small;
+  }
+}
+.pager-current
+{
+  display: none;
+}
+.entity-pager__prev,
+.pager-previous
+{
+  float: left;
+}
+.entity-pager__next,
+.pager-next
+{
+  float: right;
+}
+
+.view-news-page
+{
+  .pager
+  {
+    text-align: center;
+  }
+  .pager-previous,
+  .pager-next
+  {
+    float: none;
+    display: inline-block;
+    
+    a
+    {
+      margin: 0 20px 20px 20px;
+    }
+  }
+}
+
+.block__newsletter-signup
+{
+  clear: both;
+  padding-top: 30px;
+  text-align: center;
+  
+  h2
+  {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  form
+  {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 0.9em;
+    
+    &:before
+    {
+      content: "";
+      display: block;
+      width: 300px;
+      height: 80px;
+      background: url(../img/pulse.png) no-repeat center center;
+      float: left;
+      margin-right: 25px;
+    }
+  }
+  .mc-field-group
+  {
+    overflow: hidden;
+  }
+  .for-email
+  {
+    display: block;
+  }
+  .for-agree
+  {
+    margin-top: 15px;
+    display: block;
+    
+    input
+    {
+      margin-right: 6px;
+    }
+  }
+  .button
+  {
+    margin: 30px auto 0 auto;
+  }
+}

@@ -75,6 +75,8 @@
   background: url(../img/dream-home.jpg) no-repeat center center;
   background-size: cover;
   color: white;
+  border-top: 2px solid $blue;
+  border-bottom: 2px solid $blue;
   
   & > div
   {
@@ -98,24 +100,9 @@
   }
   .view-prizes
   {
-    display: block;
-    width: 140px;
-    height: 30px;
-    line-height: 30px;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
+    @include button_small;
     margin: 30px auto 0 auto;
-    border-radius: 15px;
-    background: $blue;
-    font-weight: 600;
     text-shadow: none;
-    
-    &:hover
-    {
-      background: $green;
-    }
   }
 }
 
@@ -148,6 +135,7 @@
     float: left;
     width: 32%;
     margin-right: 2%;
+    margin-bottom: 30px;
     position: relative;
     overflow: hidden;
     
@@ -240,23 +228,7 @@
   }
   .read-more
   {
-    margin: 35px auto 0 auto;
-    color: white;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9em;
-    text-align: center;
-    display: block;
-    width: 140px;
-    height: 30px;
-    line-height: 30px;
-    background: $blue;
-    border-radius: 15px;
-    
-    &:hover
-    {
-      background: $green;
-    }
+    @include button_small;
+    margin: 0 auto;
   }
 }
