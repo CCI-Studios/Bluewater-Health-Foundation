@@ -4,18 +4,22 @@
   font-size: 2.25em;
   margin-bottom: 35px;
 }
-.block-views-staff-block-staff
+.block-views-staff-block-board
 {
-  border-bottom: 2px solid $blue;
-  margin-bottom: 40px;
+  overflow: hidden;
+  
+  & > div
+  {
+    border-top: 2px solid $blue;
+    padding-top: 40px;
+    margin-top: 40px;
+  }
 }
 .view-staff
 {
   @include clearfix;
   position: relative;
   overflow: hidden;
-  padding-bottom: 50px;
-  // max-height: none !important;
   
   .views-row:nth-child(3n+1) .staff__teaser
   {

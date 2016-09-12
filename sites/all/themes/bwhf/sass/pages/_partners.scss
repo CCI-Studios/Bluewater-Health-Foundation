@@ -1,0 +1,61 @@
+.view-partners
+{
+  .views-row
+  {
+    padding: 25px 40px;
+    border-bottom: 2px solid $blue;
+  }
+  .views-row-last
+  {
+    border-bottom: 0;
+  }
+  .field-image
+  {
+    float: left;
+    width: 40%;
+    margin-right: 5%;
+    
+    img
+    {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .content
+  {
+    float: left;
+    width: 55%;
+  }
+  .field-title h2
+  {
+    font-size: 2.25em;
+    margin-bottom: 0;
+    
+    &:after
+    {
+      content: "";
+      display: block;
+      max-width: 290px;
+      border-bottom: 1px solid $blue;
+      margin-top: 4px;
+    }
+  }
+  .field-link a
+  {
+    display: block;
+    color: $blue;
+    font-size: 1.2em;
+    text-decoration: none;
+    margin-bottom: 10px;
+    
+    &:hover
+    {
+      text-decoration: underline;
+    }
+  }
+  .field-body
+  {
+    font-size: 0.9em;
+  }
+}
