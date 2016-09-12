@@ -1,0 +1,134 @@
+.path-urgent-needs .page-title
+{
+  text-align: center;
+}
+
+.block__urgent-needs-sticky
+{
+  clear: both;
+  
+  .views-row
+  {
+    clear: both;
+    margin-top: 40px;
+  }
+  .field-image
+  {
+    float: left;
+    margin-right: 30px;
+    width: 340px;
+    text-align: center;
+    
+    img
+    {
+      display: inline-block;
+      max-width: 100%;
+    }
+  }
+  .node .content
+  {
+    padding-left: 370px;
+  }
+  .field-title h2
+  {
+    font-size: 2.25em;
+    margin-bottom: 5px;
+    line-height: 1;
+    
+    &:after
+    {
+      content: "";
+      display: block;
+      width: 100%;
+      max-width: 288px;
+      border-bottom: 1px solid $blue;
+      margin-top: 2px;
+    }
+  }
+  .field-department
+  {
+    color: $blue;
+    font-size: 1.2em;
+    
+    .field-label,
+    .field
+    {
+      display: inline-block;
+    }
+  }
+  .field-cost
+  {
+    color: $blue;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 5px 0;
+    
+    .field-label,
+    .field
+    {
+      display: inline-block;
+    }
+  }
+  .field-body
+  {
+    font-size: 0.85em;
+  }
+}
+
+.block__urgent-needs
+{
+  clear: both;
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 2px solid $blue;
+  text-align: center;
+  color: $blue;
+  
+  .views-row
+  {
+    float: left;
+    width: 33.333%;
+    margin-bottom: 40px;
+    
+    &:nth-child(3n+1)
+    {
+      clear: left;
+    }
+    
+    & > div
+    {
+      padding: 0 20px;
+    }
+  }
+  .field-image img
+  {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .field-title h2
+  {
+    font-size: 1.75em;
+    padding-top: 20px;
+    margin-bottom: 0;
+    line-height: 1;
+    
+    &:after
+    {
+      content: "";
+      display: block;
+      width: 100px;
+      margin: 8px auto;
+      border-bottom: 1px solid $blue;
+    }
+  }
+  .field-department
+  {
+    font-size: 1.2em;
+  }
+  .field-cost
+  {
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+}
