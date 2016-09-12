@@ -1,0 +1,77 @@
+.path-ways-to-give .page-title
+{
+  text-align: center;
+}
+.ways-to-give
+{
+  padding-top: 40px;
+  text-align: center;
+}
+.ways-to-give--item
+{
+  float: left;
+  width: 33.33%;
+  box-sizing: border-box;
+  padding: 100px 25px 40px 25px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  
+  &:nth-child(3n + 1)
+  {
+    clear: left;
+  }
+  
+  h2
+  {
+    margin-bottom: 0;
+    
+    &:after
+    {
+      content: "";
+      display: block;
+      width: 60px;
+      margin: 6px auto;
+      border-bottom: 1px solid $blue;
+    }
+  }
+  p
+  {
+    font-size: 0.9em;
+  }
+}
+.ways-to-give--item__donate-now
+{
+  background-image: url(../img/icon-give-now-blue.svg);
+}
+.ways-to-give--item__monthly
+{
+  background-image: url(../img/icon-monthly-blue.svg);
+}
+.ways-to-give--item__in-memory
+{
+  background-image: url(../img/icon-in-memory-blue.svg);
+}
+.ways-to-give--item__in-honour
+{
+  background-image: url(../img/icon-in-honour-blue.svg);
+}
+.ways-to-give--item__planned-giving
+{
+  background-image: url(../img/icon-planned-giving-blue.svg);
+}
+.ways-to-give--item__events
+{
+  background-image: url(../img/icon-events-blue.svg);
+}
+.ways-to-give--item__in-kind
+{
+  background-image: url(../img/icon-in-kind-blue.svg);
+}
+.ways-to-give--item__staff-giving
+{
+  background-image: url(../img/icon-staff-giving-blue.svg);
+}
+.ways-to-give--item__volunteer
+{
+  background-image: url(../img/icon-volunteer-blue.svg);
+}
