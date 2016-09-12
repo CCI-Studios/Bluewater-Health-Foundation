@@ -21,6 +21,28 @@
     clear: left;
   }
   
+  &
+  {
+    @media screen and (max-width: 760px)
+    {
+      width: 50%;
+      
+      &:nth-child(3n + 1)
+      {
+        clear: none;
+      }
+      &:nth-child(2n + 1)
+      {
+        clear: left;
+      }
+    }
+    @media screen and (max-width: 520px)
+    {
+      width: auto;
+      float: none;
+    }
+  }
+  
   h2
   {
     margin-bottom: 0;
