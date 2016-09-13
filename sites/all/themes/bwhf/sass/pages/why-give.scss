@@ -1,0 +1,76 @@
+.path-why-give
+{
+  .page-title
+  {
+    text-align: center;
+  }
+  .main-content
+  {
+    p, h2
+    {
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    strong
+    {
+      color: $blue;
+    }
+  }
+}
+
+.why-give--thirds
+{
+  float: left;
+  width: 33.333%;
+  color: $blue;
+  font-size: 1.1em;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 110px 25px 25px 25px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  margin-top: 30px;
+}
+.why-give--reduce-wait-times
+{
+  background-image: url(../img/icon-clock-blue.svg);
+}
+.why-give--avoid-travel
+{
+  background-image: url(../img/icon-plane-blue.svg);
+}
+.why-give--best-care
+{
+  background-image: url(../img/icon-hospital-blue.svg);
+}
+
+.why-give--fourths
+{
+  float: left;
+  width: 25%;
+  color: $blue;
+  font-size: 1.5em;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 110px 25px 25px 25px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  margin-top: 30px;
+}
+.why-give--mens-health
+{
+  background-image: url(../img/icon-mens-health-blue.svg);
+}
+.why-give--womens-health
+{
+  background-image: url(../img/icon-womens-health-blue.svg);
+}
+.why-give--diagnostic-health
+{
+  background-image: url(../img/icon-diagnostic-blue.svg);
+}
+.why-give--family-health
+{
+  background-image: url(../img/icon-family-health-blue.svg);
+}
