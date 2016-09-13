@@ -1,6 +1,6 @@
 @mixin button_small
 {
-  display: block;
+  display: inline-block;
   color: white;
   text-decoration: none;
   text-transform: uppercase;
@@ -22,6 +22,7 @@
     background: $green;
   }
 }
+.button,
 .button__small
 {
   @include button_small;

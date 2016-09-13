@@ -229,6 +229,7 @@
   .read-more
   {
     @include button_small;
+    display: block;
     margin: 0 auto;
   }
 }

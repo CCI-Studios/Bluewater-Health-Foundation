@@ -1,0 +1,113 @@
+.view-volunteer-features
+{
+  margin: 40px 0;
+  
+  .field-image
+  {
+    float: left;
+    margin-right: 15px;
+    
+    img
+    {
+      display: block;
+    }
+  }
+  .field-body
+  {
+    color: $blue;
+    font-style: italic;
+    font-size: 0.9375em;
+    padding-top: 15px;
+  }
+}
+
+.view-volunteer-features,
+.view-volunteer-videos
+{
+  .view-content
+  {
+    padding-left: 35px;
+    padding-right: 35px;
+    position: relative;
+  }
+  
+  .slick-arrow
+  {
+    display: block;
+    font-size: 0;
+    width: 35px;
+    height: 40px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    border: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+  }
+  .slick-prev
+  {
+    left: 0;
+    background-position: left center;
+    background-image: url(../img/arrow-left-blue.svg);
+  }
+  .slick-next
+  {
+    right: 0;
+    background-position: right center;
+    background-image: url(../img/arrow-right-blue.svg);
+  }
+}
+
+.view-volunteer-videos
+{
+  margin-bottom: 40px;
+  
+  .field-youtube
+  {
+    padding-bottom: 56.25%;
+    position: relative;
+    
+    iframe
+    {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.block__volunteer-form
+{
+  border-top: 2px solid $blue;
+  padding-top: 40px;
+  
+  & > div
+  {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .webform-component--first-name,
+  .webform-component--last-name,
+  .webform-component--phone-number,
+  .webform-component--email
+  {
+    float: left;
+    width: 48%;
+  }
+  .webform-component--first-name,
+  .webform-component--email
+  {
+    margin-right: 4%;
+  }
+  .webform-component--preferred-method
+  {
+    clear: both;
+  }
+}
