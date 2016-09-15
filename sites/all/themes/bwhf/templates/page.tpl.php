@@ -119,6 +119,10 @@
       <?php endif; ?>
 
     </div></div></div>
+    
+    <div class="pre-footer"><div><div>
+      <?php print render($page['pre_footer']); ?>
+    </div></div></div>
 
     <div class="footer"><div><div>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="logo-footer">

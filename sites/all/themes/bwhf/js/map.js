@@ -2,19 +2,23 @@
     $(function(){
         if ($(".contact--map").length)
         {
-            createMap();
+            createMap($(".contact--map"), '89 Norman Street, Sarnia, Ontario, N7T 6S3');
+        }
+        if ($(".bean-map").length)
+        {
+            var address = $(".bean-map .field-address").data("address");
+            createMap($(".bean-map"), address);
         }
     });
 
-    function createMap()
+    function createMap($container, address)
     {
         var mapOptions = {
             zoom: 16,
             center: new google.maps.LatLng(42.9770439, -82.392355),
             scrollwheel: false
         }
-        var map = new google.maps.Map($(".contact--map").get(0), mapOptions);
-        var address = '89 Norman Street, Sarnia, Ontario, N7T 6S3';
+        var map = new google.maps.Map($container.get(0), mapOptions);
         var geocoder = new google.maps.Geocoder();
         geocoder.geocode({'address':address},
         function(results, status){

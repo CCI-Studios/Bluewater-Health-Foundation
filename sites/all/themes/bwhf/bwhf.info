@@ -7,8 +7,13 @@ scripts[] = js/header.js
 scripts[] = js/map.js
 scripts[] = js/staff-perks.js
 scripts[] = js/volunteer.js
+scripts[] = js/countdown.js
+scripts[] = js/early-bird.js
+scripts[] = js/dream-home-photos.js
+scripts[] = js/lightbox.min.js
 
 stylesheets[all][] = css/slick.css
+stylesheets[all][] = css/lightbox.min.css
 stylesheets[all][] = css/screen.css
 
 regions[navigation] = Navigation1
@@ -18,5 +23,5 @@ regions[header] = Header
 regions[help] = Help
 regions[content] = Content
 regions[sidebar] = Sidebar
+regions[pre_footer] = Pre Footer
 regions[footer] = Footer
-

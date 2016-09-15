@@ -1,0 +1,703 @@
+.block__header-dream-home
+{
+  height: 350px;
+  background: url(../img/dream-home.jpg) no-repeat center center;
+  background-size: cover;
+  border-bottom: 2px solid $blue;
+  position: relative;
+  
+  & > div
+  {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
+  .content
+  {
+    max-width: 800px;
+    margin: 0 auto;
+    color: white;
+    text-shadow: 0 0 8px black;
+    font-weight: 600;
+    font-size: 0.9em;
+    padding: 25px;
+    
+    a
+    {
+      color: white;
+    }
+  }
+}
+
+.block__dream-home-countdown
+{
+  padding-top: 50px;
+  border-top: 2px solid $blue;
+  margin-top: 50px;
+}
+.bean-dream-home-date
+{
+  .content
+  {
+    width: 52.5%;
+    width: calc(95% - 380px);
+    margin-right: 5%;
+    float: left;
+    color: $blue;
+  }
+  .countdown
+  {
+    float: left;
+    width: 380px;
+    box-sizing: border-box;
+    background: $blue;
+    color: white;
+    padding: 50px 35px;
+    text-align: center;
+    line-height: 1;
+    
+    & > div
+    {
+      max-width: 310px;
+      margin: 0 auto;
+    }
+  }
+  .field-draw-date
+  {
+    font-size: 2.25em;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+  .field-value
+  {
+    font-weight: bold;
+  }
+  .field-deadline,
+  .field-draw-location
+  {
+    margin-bottom: 10px;
+    font-size: 1.15em;
+    line-height: 1.1;
+  }
+  .countdown--title
+  {
+    font-weight: bold;
+    font-size: 1.8em;
+    border-bottom: 2px solid white;
+    line-height: 0.9;
+    padding-bottom: 5px;
+  }
+  .countdown--time
+  {
+    & > div
+    {
+      display: inline-block;
+      vertical-align: top;
+    }
+    .value
+    {
+      font-size: 3em;
+      font-weight: bold;
+      line-height: 1;
+    }
+    .separator
+    {
+      font-size: 3em;
+      font-weight: bold;
+      line-height: 1;
+    }
+    .label
+    {
+      font-size: 1.1em;
+      font-weight: 600;
+    }
+  }
+}
+
+.block__dream-home-where-tickets
+{
+  color: $blue;
+  padding-top: 50px;
+  margin-top: 50px;
+  border-top: 2px solid $blue;
+  
+  &:after
+  {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  h2
+  {
+    text-align: center;
+    font-size: 2.25em;
+  }
+  .content
+  {
+    font-size: 1.15em;
+    max-width: 820px;
+    margin: 0 auto;
+    
+    p
+    {
+      line-height: 1.1;
+    }
+  }
+  &
+  {
+    @media screen and (min-width: 760px)
+    {
+      .left
+      {
+        float: left;
+        width: 47.5%;
+        margin-right: 5%;
+      }
+      .right
+      {
+        float: left;
+        width: 47.5%;
+      }
+    }
+  }
+}
+
+.bean-map
+{
+  height: 375px;
+}
+.block__dream-home-map
+{
+  border-top: 2px solid $blue;
+}
+
+.path-dream-home-lottery.path-about
+{
+  .page-title
+  {
+    text-align: center;
+  }
+  .left
+  {
+    margin-bottom: 2em;
+  }
+  &
+  {
+    @media screen and (min-width: 760px)
+    {
+      .left
+      {
+        float: left;
+        width: 55%;
+        margin-bottom: 0;
+      }
+      .right
+      {
+        float: right;
+        width: 40%;
+      }
+    }
+  }
+}
+
+.block__dream-home-photos
+{
+  margin-top: 50px;
+  
+  .slick-slider
+  {
+    padding-left: 35px;
+    padding-right: 35px;
+    position: relative;
+  }
+  
+  .slick-arrow
+  {
+    display: block;
+    font-size: 0;
+    width: 35px;
+    height: 40px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    border: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+  }
+  .slick-prev
+  {
+    left: 0;
+    background-position: left center;
+    background-image: url(../img/arrow-left-blue.svg);
+  }
+  .slick-next
+  {
+    right: 0;
+    background-position: right center;
+    background-image: url(../img/arrow-right-blue.svg);
+  }
+  .field-name-field-photos
+  {
+    a
+    {
+      display: block;
+      padding: 0 15px;
+    }
+    img
+    {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.path-dream-home-lottery
+{
+  &.path-sponsors,
+  &.path-prizes
+  {
+    .page-title
+    {
+      text-align: center;
+      max-width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .block-system-main
+    {
+      text-align: center;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 0.9em;
+    }
+  }
+}
+.block__dream-home-sponsors-higher
+{
+  .views-grouping
+  {
+    padding-top: 30px;
+    border-bottom: 2px solid $blue;
+    
+    &:after
+    {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+  h3
+  {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.5em;
+  }
+  .views-row
+  {
+    float: left;
+    width: 21%;
+    margin: 0 2% 30px 2%;
+    color: $blue;
+    text-align: center;
+    
+    &:nth-child(4n+1)
+    {
+      clear: left;
+    }
+    
+    a
+    {
+      display: block;
+      text-decoration: none;
+      color: $blue;
+    }
+    img
+    {
+      display: inline-block;
+      vertical-align: middle;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .views-field-image
+  {
+    height: 150px;
+    line-height: 150px;
+  }
+  .views-field-title
+  {
+    font-size: 1.15em;
+    text-align: center;
+  }
+}
+.block__dream-home-sponsors-lower
+{
+  padding-top: 30px;
+  text-align: center;
+  
+  &:after
+  {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  
+  h3
+  {
+    font-weight: 400;
+    font-size: 1.15em;
+  }
+  .views-grouping
+  {
+    width: 21%;
+    margin: 0 2%;
+    float: left;
+  }
+  .views-row
+  {
+    padding-bottom: 0.8em;
+  }
+  .views-row-last
+  {
+    padding-bottom: 0;
+  }
+  .views-field-title
+  {
+    font-size: 0.9375em;
+    line-height: 1;
+  }
+}
+
+.bean-dream-home-grand-prize
+{
+  padding: 40px 0;
+  border-bottom: 2px solid $blue;
+  
+  .field-image
+  {
+    float: left;
+    width: 50%;
+    margin-right: 3%;
+    position: relative;
+    overflow: hidden;
+    
+    img
+    {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .field-winner
+  {
+    position: absolute;
+    left: -42px;
+    top: 25px;
+    background: $green;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 30px;
+    height: 30px;
+    font-size: 1.5em;
+    color: white;
+    padding: 0 50px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.25);
+    -webkit-transform: rotate(-40deg);
+    transform: rotate(-40deg);
+  }
+  .content
+  {
+    float: left;
+    width: 47%;
+  }
+  .field-title h2
+  {
+    font-weight: bold;
+    font-size: 2.5em;
+    line-height: 0.85;
+    margin-bottom: 15px;
+    
+    .win
+    {
+      font-weight: 400;
+    }
+  }
+  .field-body
+  {
+    p
+    {
+      font-size: 0.9em;
+    }
+  }
+}
+
+.block__early-bird-prizes
+{
+  padding: 40px 0 10px 0;
+  border-bottom: 2px solid $blue;
+  
+  &:after
+  {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  
+  h2
+  {
+    text-align: center;
+    font-size: 2.25em;
+  }
+  .views-row
+  {
+    float: left;
+    width: 32%;
+    margin-left: 2%;
+    margin-bottom: 30px;
+    
+    &:nth-child(3n+1)
+    {
+      margin-left: 0;
+      clear: left;
+    }
+  }
+}
+.node-dream-home-early-bird-prize
+{
+  .teaser
+  {
+    position: relative;
+    padding-bottom: 66.666%;
+    text-align: center;
+    
+    a
+    {
+      display: block;
+      text-decoration: none;
+      color: white;
+      text-shadow: 0 0 8px black;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .background
+    {
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+    .content
+    {
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    .field-title
+    {
+      font-weight: bold;
+      font-size: 1.4em;
+      line-height: 1;
+      
+      &:after
+      {
+        content: "";
+        display: block;
+        width: 100px;
+        margin: 10px auto;
+        border-bottom: 1px solid white;
+      }
+    }
+    .read-more
+    {
+      font-size: 1.2em;
+    }
+  }
+  .popup
+  {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 85%;
+    max-width: 500px;
+    max-height: 90%;
+    overflow: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.60);
+    background: white;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1001;
+    
+    .field-image img
+    {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .content
+    {
+      padding: 20px;
+    }
+    .field-title
+    {
+      color: $blue;
+      font-weight: bold;
+      line-height: 1;
+      text-align: center;
+      font-size: 1.4em;
+      margin-bottom: 10px;
+    }
+    .field-label
+    {
+      color: $blue;
+      font-size: 1.15em;
+    }
+    .left
+    {
+      float: left;
+      width: 140px;
+      margin-right: 30px;
+    }
+    .field-description
+    {
+      overflow: hidden;
+      
+      .field-item
+      {
+        margin-bottom: 0;
+      }
+      p
+      {
+        line-height: 1.15;
+      }
+    }
+    .field-name-field-estimated-value .field-item
+    {
+      font-weight: bold;
+      color: $blue;
+      font-size: 1.15em;
+    }
+    .field-item
+    {
+      margin-bottom: 1em;
+    }
+    .field-name-field-donor,
+    .field-name-body
+    {
+      .field-item
+      {
+        font-size: 0.9em;
+      }
+    }
+  }
+  .popup-cover
+  {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    cursor: pointer;
+    z-index: 1000;
+  }
+}
+
+.block__cash-prizes
+{
+  padding-top: 40px;
+  
+  &:after
+  {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  
+  h2
+  {
+    text-align: center;
+    font-size: 2.25em;
+  }
+  .views-grouping:nth-child(-n+2)
+  {
+    float: left;
+    width: 46%;
+    margin: 0 2% 30px 2%;
+    text-align: center;
+    color: $blue;
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 1;
+    
+    h3
+    {
+      font-weight: bold;
+      margin-bottom: 0;
+      font-size: 1.5em;
+      
+      &:after
+      {
+        content: "";
+        display: block;
+        width: 100px;
+        margin: 8px auto;
+        border-bottom: 1px solid $blue;
+      }
+    }
+  }
+  .views-grouping:nth-child(1) > div
+  {
+    width: 50%;
+    float: right;
+  }
+  .views-grouping:nth-child(2) > div
+  {
+    width: 50%;
+    float: left;
+  }
+  .views-grouping:nth-child(3)
+  {
+    clear: left;
+  }
+  .views-grouping:nth-child(n+3)
+  {
+    float: left;
+    width: 31.333%;
+    margin: 0 1%;
+    
+    h3
+    {
+      text-align: center;
+      font-weight: 400;
+      font-size: 1.5em;
+    }
+    .views-grouping--rows
+    {
+      column-count: 2;
+    }
+    .views-row
+    {
+      font-size: 0.9em;
+      margin-bottom: 8px;
+      line-height: 1;
+      display: inline-block;
+    }
+  }
+  
+}
