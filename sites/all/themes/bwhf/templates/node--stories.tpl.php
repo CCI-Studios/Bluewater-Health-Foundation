@@ -90,19 +90,11 @@ $image_url = file_create_url($content['field_image']['#items'][0]['uri']);
       <div class="field-title">
         <?php print $title; ?>
       </div>
-      <div class="submitted">
-        <?php print render($content['field_date']); ?>
-      </div>
     </div>
   </a>
 <?php else: ?>
   <div class="content"<?php print $content_attributes; ?>>
-    <p class="submitted">
-      <?php print render($content['field_date']); ?>
-    </p>
-    <p><img src="<?php print $image_url;?>"></p>
     <?php print render($content['body']); ?>
-    <div class="node--event--back"><a href="/events" class="button">Back to Events</a></div>
   </div>
 <?php endif; ?>
 

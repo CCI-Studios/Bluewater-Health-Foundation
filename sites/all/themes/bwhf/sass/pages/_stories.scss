@@ -1,0 +1,121 @@
+.view-stories,
+.view-our-donors
+{
+  .view-content
+  {
+    @include clearfix;
+  }
+  .views-row
+  {
+    float: left;
+    width: 32%;
+    margin-right: 2%;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    
+    &:before
+    {
+      content: "";
+      display: block;
+      padding-bottom: 66.666%;
+    }
+    &:nth-child(3n+3)
+    {
+      margin-right: 0;
+    }
+    
+    a
+    {
+      display: block;
+      text-decoration: none;
+      color: white;
+      
+      &:after
+      {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: $green;
+        opacity: 0;
+        z-index: 1;
+        transition: opacity 0.25s;
+      }
+      &:hover
+      {
+        &:after
+        {
+          opacity: 0.5;
+        }
+        img
+        {
+          left: -2.5%;
+          top: -2.5%;
+          width: 105%;
+        }
+      }
+    }
+    img
+    {
+      display: block;
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 0.25s;
+    }
+    .content
+    {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      padding: 0 20px;
+      z-index: 2;
+      text-align: center;
+      text-shadow: 0 0 4px rgba(0,0,0,0.75);
+    }
+    .field-title
+    {
+      font-size: 1.5em;
+      font-weight: 600;
+      line-height: 1;
+      
+      &:after
+      {
+        content: "";
+        display: block;
+        margin: 8px auto;
+        width: 100px;
+        border-bottom: 1px solid white;;
+      }
+    }
+  }
+}
+
+.view-stories,
+.view-our-donors
+{
+  &.view-display-id-block_sticky
+  {
+    .views-row
+    {
+      width: 49%;
+      
+      &:nth-child(3n+3)
+      {
+        margin-right: 2%;
+      }
+      &:nth-child(2n+2)
+      {
+        margin-right: 0;
+      }
+    }
+  }
+}

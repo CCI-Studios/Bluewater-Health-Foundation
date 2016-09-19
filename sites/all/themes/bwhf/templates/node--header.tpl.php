@@ -86,7 +86,7 @@ $image_url = file_create_url($content['field_background_image']['#items'][0]['ur
   <div class="background" style="background-image:url('<?php print $image_url;?>');"><div>
     <div class="title"><h2><?php print $title; ?></h2></div>
     <?php print render($content['body']); ?>
-    <div class="give-now-container"><a href="/" class="give-now">Give Now</a></div>
+    <div class="give-now-container"><a href="/give-now" class="give-now">Give Now</a></div>
   </div></div>
 
 </div>

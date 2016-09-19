@@ -1,0 +1,218 @@
+.view-event-calendar
+{
+  .fc-left .fc-button-group
+  {
+    padding-left: 20px;
+  }
+  .fc-prev-button,
+  .fc-next-button,
+  {
+    @include button_small;
+    text-shadow: none;
+    box-shadow: none;
+    margin: 0 10px;
+    
+    &:before
+    {
+      content: "previous";
+      display: block;
+    }
+    span
+    {
+      display: none;
+    }
+  }
+  .fc-next-button,
+  {
+    &:before
+    {
+      content: "next";
+    }
+  }
+  .fc-month-button
+  {
+    background: $blue;
+    font-size: 0;
+    display: block;
+    width: 36px;
+    height: 25px;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    position: relative;
+    border: 0;
+    
+    &:hover
+    {
+      background: $green;
+    }
+    &:before
+    {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 3px;
+      background: white;
+      height: 100%;
+      margin-left: -1px;
+    }
+    &:after
+    {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      height: 3px;
+      background: white;
+      width: 100%;
+      margin-top: -1px;
+    }
+  }
+  .fc-right
+  {
+    margin-right: 15px;
+    
+    .fc-button
+    {
+      margin-left: 15px;
+    }
+    .fc-button-group
+    {
+      @media screen and (max-width: 800px)
+      {
+        display: none;
+      }
+    }
+  }
+  .fc-listMonth-button
+  {
+    background: none;
+    position: relative;
+    border: 0;
+    width: 36px;
+    height: 25px;
+    font-size: 0;
+    box-shadow: none;
+    z-index: 1;
+    
+    span
+    {
+      position: static;
+    }
+    
+    &:before,
+    &:after,
+    span:before,
+    span:after
+    {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      background: $blue;
+      border-radius: 2px;
+      left: 0;
+    }
+    &:before
+    {
+      top: 0;
+    }
+    &:after
+    {
+      top: 7px;
+    }
+    span:before
+    {
+      bottom: 0;
+    }
+    span:after
+    {
+      top: auto;
+      bottom: 7px;
+    }
+    &:hover
+    {
+      &:before,
+      &:after,
+      span:before,
+      span:after
+      {
+        background: $green;
+      }
+    }
+  }
+  .fc-day-header,
+  .fc-head-container
+  {
+    display: none;
+  }
+  td
+  {
+    border-color: $blue;
+  }
+  .fc-day-number
+  {
+    float: left !important;
+    color: $blue;
+    padding: 5px;
+    line-height: 1;
+    font-size: 0.9em;
+  }
+  .fc-other-month
+  {
+    background: #ccddec;
+    
+    .fc-day-number
+    {
+      display: none;
+    }
+    .fc-event
+    {
+      display: none;
+    }
+  }
+  .fc-has-event
+  {
+    background: $blue;
+    color: white;
+    font-weight: 600;
+    
+    .fc-day-number
+    {
+      color: white;
+    }
+  }
+  .fc-event
+  {
+    background: none;
+    color: white;
+    text-decoration: underline;
+    border: 0;
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+  .fc-today
+  {
+    background: #cce2dd;
+  }
+  .view-content
+  {
+    display: none;
+  }
+}
+
+.page-events .page-title
+{
+  text-align: center;
+}
+.node--event--back
+{
+  margin-top: 1.5em;
+}
