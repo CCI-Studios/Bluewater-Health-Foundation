@@ -74,4 +74,9 @@ ul, ol
     border-bottom: 2px solid $blue;
     margin-bottom: 0.8em;
   }
+  img
+  {
+    max-width: 100%;
+    height: auto;
+  }
 }

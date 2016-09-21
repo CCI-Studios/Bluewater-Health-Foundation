@@ -100,7 +100,7 @@ $image_url = file_create_url($content['field_image']['#items'][0]['uri']);
     <p class="submitted">
       <?php print render($content['field_date']); ?>
     </p>
-    <p><img src="<?php print $image_url;?>"></p>
+    <p><img src="<?php print $image_url;?>" class="field-image"></p>
     <?php print render($content['body']); ?>
     <div class="node--event--back"><a href="/events" class="button">Back to Events</a></div>
   </div>

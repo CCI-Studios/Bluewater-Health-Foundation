@@ -31,6 +31,14 @@
   background-repeat: no-repeat;
   background-position: top center;
   margin-top: 30px;
+  
+  @media screen and (max-width: 560px)
+  {
+    float: none;
+    width: auto;
+    max-width: 320px;
+    margin: 30px auto 0 auto;
+  }
 }
 .why-give--reduce-wait-times
 {
@@ -57,6 +65,13 @@
   background-repeat: no-repeat;
   background-position: top center;
   margin-top: 30px;
+  
+  @media screen and (max-width: 560px)
+  {
+    width: 50%;
+    margin-top: 20px;
+    padding-top: 95px;
+  }
 }
 .why-give--mens-health
 {

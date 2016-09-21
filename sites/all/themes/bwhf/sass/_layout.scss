@@ -1,6 +1,11 @@
 .page-wrapper
 {
   overflow: hidden;
+  
+  @media screen and (max-width: 840px)
+  {
+    padding-top: 90px;
+  }
 }
 
 @mixin container()
@@ -31,11 +36,29 @@
   width: 65%;
   margin-right: 5%;
   float: left;
+  
+  @media screen and (max-width: 760px)
+  {
+    float: none;
+    width: auto;
+    margin-right: 0;
+  }
 }
 .sidebar
 {
   width: 30%;
   float: left;
+  
+  &
+  {
+    @media screen and (max-width: 760px)
+    {
+      float: none;
+      width: auto;
+      max-width: 360px;
+      margin: 50px auto 20px auto;
+    }
+  }
   
   h2
   {
@@ -53,6 +76,14 @@
       width: auto;
       margin-right: 0;
       margin-bottom: 15px;
+    }
+    .views-row .field-title
+    {
+      @media screen and (max-width: 860px)
+      {
+        font-size: 1.2em;
+        line-height: 0.9;
+      }
     }
   }
   .block

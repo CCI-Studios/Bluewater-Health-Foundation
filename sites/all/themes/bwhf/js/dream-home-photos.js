@@ -10,6 +10,20 @@
         speed: 200,
         slidesToShow: 3,
         autoplay: false,
+        responsive: [
+          {
+            breakpoint: 760,
+            settings: {
+              slidesToShow: 2,
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+            }
+          },
+        ]
       });
       lightbox.option({
         'resizeDuration': 200,

@@ -24,6 +24,28 @@
     {
       margin-right: 0;
     }
+    &
+    {
+      @media screen and (max-width:640px)
+      {
+        width: 49%;
+        
+        &:nth-child(3n+3)
+        {
+          margin-right: 0;
+        }
+        &:nth-child(2n+2)
+        {
+          margin-right: 0;
+        }
+      }
+      @media screen and (max-width:480px)
+      {
+        width: auto;
+        float: none;
+        margin-right: 0 !important;
+      }
+    }
     
     a
     {
@@ -115,6 +137,15 @@
       &:nth-child(2n+2)
       {
         margin-right: 0;
+      }
+      &
+      {
+        @media screen and (max-width:640px)
+        {
+          width: auto;
+          float: none;
+          margin-right: 0 !important;
+        }
       }
     }
   }

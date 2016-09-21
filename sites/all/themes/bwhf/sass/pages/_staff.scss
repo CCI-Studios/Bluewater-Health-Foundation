@@ -21,13 +21,27 @@
   position: relative;
   overflow: hidden;
   
-  .views-row:nth-child(3n+1) .staff__teaser
+  .views-row:nth-child(3n+1)
   {
     clear: left;
   }
   .clearfix:after
   {
     display: none;
+  }
+  &
+  {
+    @media screen and (max-width: 720px)
+    {
+      .views-row:nth-child(3n+1)
+      {
+        clear: none;
+      }
+      .views-row:nth-child(2n+1)
+      {
+        clear: left;
+      }
+    }
   }
 }
 .staff__teaser
@@ -49,6 +63,12 @@
   {
     width: 180px;
     margin: 0 auto;
+    
+    @media screen and (max-width: 480px)
+    {
+      width: auto;
+      padding: 0 10px;
+    }
   }
   
   a
@@ -89,10 +109,29 @@
     font-weight: bold;
     z-index: 10;
     transition: all 0.2s;
+    
+    @media screen and (max-width: 480px)
+    {
+      font-size: 0;
+      line-height: normal;
+      
+      &:before
+      {
+        content: "View Profile";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        line-height: 30px;
+        margin-top: -15px;
+        font-size: 18px;
+      }
+    }
   }
   .field-name
   {
     font-size: 1.2em;
+    line-height: 1;
     
     &:after
     {
@@ -120,13 +159,28 @@
     
     img
     {
-      display: block;
+      display: inline-block;
+    }
+    &
+    {
+      @media screen and (max-width: 620px)
+      {
+        float: none;
+        margin: 0 0 15px 0;
+        padding-top: 30px;
+        text-align: center;
+      }
     }
   }
   .content
   {
     padding-left: 215px;
     color: $blue;
+    
+    @media screen and (max-width: 620px)
+    {
+      padding-left: 0;
+    }
   }
   .field-name
   {
@@ -141,6 +195,14 @@
       border-bottom: 1px solid $blue;
       margin-bottom: 8px;
       display: inline-block;
+    }
+    &
+    {
+      @media screen and (max-width: 620px)
+      {
+        padding-right: 0;
+        text-align: center;
+      }
     }
   }
   .field-title
@@ -203,6 +265,22 @@
       {
         right: 0;
         background-image: url(../img/quote-close.svg);
+      }
+      &
+      {
+        @media screen and (max-width: 620px)
+        {
+          padding: 0 25px;
+          font-size: 1em;
+          line-height: 1.1;
+          
+          &:before,
+          &:after
+          {
+            width: 20px;
+            background-size: contain;
+          }
+        }
       }
     }
   }

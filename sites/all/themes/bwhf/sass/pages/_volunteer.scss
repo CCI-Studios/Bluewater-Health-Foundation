@@ -9,7 +9,16 @@
     
     img
     {
-      display: block;
+      display: inline-block;
+    }
+    &
+    {
+      @media screen and (max-width:560px)
+      {
+        float: none;
+        margin-right: 0;
+        text-align: center;
+      }
     }
   }
   .field-body

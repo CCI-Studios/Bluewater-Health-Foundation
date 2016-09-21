@@ -1,8 +1,38 @@
 .view-event-calendar
 {
-  .fc-left .fc-button-group
+  .fc-left
   {
-    padding-left: 20px;
+    .fc-button-group
+    {
+      padding-left: 20px;
+    }
+    &
+    {
+      @media screen and (max-width: 620px)
+      {
+        float: none;
+        text-align: center;
+        
+        .fc-button-group
+        {
+          padding: 0;
+          float: none;
+        }
+      }
+    }
+  }
+  .fc-right
+  {
+    @media screen and (max-width: 620px)
+    {
+      float: none;
+      text-align: center;
+      
+      h2
+      {
+        float: none;
+      }
+    }
   }
   .fc-prev-button,
   .fc-next-button,
@@ -20,6 +50,13 @@
     span
     {
       display: none;
+    }
+    &
+    {
+      @media screen and (max-width: 480px)
+      {
+        width: 120px;
+      }
     }
   }
   .fc-next-button,
@@ -215,4 +252,10 @@
 .node--event--back
 {
   margin-top: 1.5em;
+}
+.node-events .field-image
+{
+  display: block;
+  max-width: 100%;
+  height: auto;
 }

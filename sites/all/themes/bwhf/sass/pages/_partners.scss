@@ -4,6 +4,14 @@
   {
     padding: 25px 40px;
     border-bottom: 2px solid $blue;
+    
+    &
+    {
+      @media screen and (max-width: 420px)
+      {
+        padding: 25px 0;
+      }
+    }
   }
   .views-row-last
   {
@@ -17,15 +25,35 @@
     
     img
     {
-      display: block;
+      display: inline-block;
       width: 100%;
       height: auto;
+    }
+    &
+    {
+      @media screen and (max-width: 560px)
+      {
+        float: none;
+        width: auto;
+        max-width: 320px;
+        margin: 0 auto 15px auto;
+        text-align: center;
+      }
     }
   }
   .content
   {
     float: left;
     width: 55%;
+    
+    &
+    {
+      @media screen and (max-width: 560px)
+      {
+        float: none;
+        width: auto;
+      }
+    }
   }
   .field-title h2
   {

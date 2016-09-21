@@ -81,6 +81,7 @@
       </a>
       <?php print render($page['navigation']); ?>
       <?php print render($page['navigation2']); ?>
+      <a href="#" class="mobile-menu">Menu</a>
     </div></div></div>
 
     <div class="header"><div><div>

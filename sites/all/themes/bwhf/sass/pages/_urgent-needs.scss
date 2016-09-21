@@ -24,10 +24,32 @@
       display: inline-block;
       max-width: 100%;
     }
+    &
+    {
+      @media screen and (max-width:760px)
+      {
+        float: none;
+        width: auto;
+        max-width: 360px;
+        margin: 0 auto 12px auto;
+      }
+    }
   }
   .node .content
   {
     padding-left: 370px;
+    
+    &
+    {
+      @media screen and (max-width:760px)
+      {
+        padding-left: 0;
+        float: none;
+        width: auto;
+        max-width: 360px;
+        margin: 0 auto;
+      }
+    }
   }
   .field-title h2
   {
@@ -98,6 +120,18 @@
     & > div
     {
       padding: 0 20px;
+    }
+    &
+    {
+      @media screen and (max-width:760px)
+      {
+        width: 50%;
+      }
+      @media screen and (max-width:540px)
+      {
+        width: auto;
+        float: none;
+      }
     }
   }
   .field-image img
