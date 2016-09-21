@@ -37,13 +37,26 @@
     }
   }
 }
-.navbar-tray-open.navbar-vertical.navbar-fixed
+.navbar-tray-open.navbar-vertical
 {
   .navigation-fixed
   {
     left: 240px;
     left: 15rem;
+  }
+}
+.navbar-fixed
+{
+  .navigation-fixed
+  {
     top: 39px;
+  }
+}
+.navbar-tray-open.navbar-horizontal
+{
+  .navigation-fixed
+  {
+    top: 79px;
   }
 }
 
