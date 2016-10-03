@@ -38,6 +38,7 @@
   padding-top: 50px;
   border-top: 2px solid $blue;
   margin-top: 50px;
+  clear: both;
 }
 .bean-dream-home-date
 {
@@ -763,23 +764,19 @@
   }
 }
 
-.block__cash-prizes
+.block__dream-home-cash-prize-heading
 {
   padding-top: 40px;
-  
-  &:after
-  {
-    content: "";
-    display: block;
-    clear: both;
-  }
   
   h2
   {
     text-align: center;
     font-size: 2.25em;
   }
-  .views-grouping:nth-child(-n+2)
+}
+
+  .block-bean-dream-home-cash-prizes-5000,
+  .block-bean-dream-home-cash-prizes-2500
   {
     float: left;
     width: 46%;
@@ -790,7 +787,7 @@
     font-weight: 600;
     line-height: 1;
     
-    h3
+    h2
     {
       font-weight: bold;
       margin-bottom: 0;
@@ -814,7 +811,7 @@
       }
     }
   }
-  .views-grouping:nth-child(1) > div
+  .block-bean-dream-home-cash-prizes-5000 > div
   {
     width: 50%;
     float: right;
@@ -827,7 +824,7 @@
       }
     }
   }
-  .views-grouping:nth-child(2) > div
+  .block-bean-dream-home-cash-prizes-2500 > div
   {
     width: 50%;
     float: left;
@@ -840,17 +837,19 @@
       }
     }
   }
-  .views-grouping:nth-child(3)
+  .block-bean-dream-home-cash-prizes-1000
   {
     clear: left;
   }
-  .views-grouping:nth-child(n+3)
+  .block-bean-dream-home-cash-prizes-1000,
+  .block-bean-dream-home-cash-prizes-500,
+  .block-bean-dream-home-cash-prizes-100
   {
     float: left;
     width: 31.333%;
-    margin: 0 1%;
+    margin: 0 1% 40px 1%;
     
-    h3
+    h2
     {
       text-align: center;
       font-weight: 400;
@@ -861,17 +860,21 @@
         margin-bottom: 0;
       }
     }
-    .views-grouping--rows
+    .content
     {
-      column-count: 2;
-    }
-    .views-row
-    {
-      font-size: 0.9em;
-      margin-bottom: 8px;
-      line-height: 1;
-      display: inline-block;
-      width: 100%;
+      ul
+      {
+        column-count: 2;
+        margin: 0;
+      }
+      li
+      {
+        font-size: 0.9em;
+        margin-bottom: 8px;
+        line-height: 1;
+        display: inline-block;
+        width: 100%;
+      }
     }
     &
     {
@@ -884,5 +887,4 @@
       }
     }
   }
-  
-}
+
