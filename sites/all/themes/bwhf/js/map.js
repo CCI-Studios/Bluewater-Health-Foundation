@@ -16,7 +16,14 @@
         var mapOptions = {
             zoom: 16,
             center: new google.maps.LatLng(42.9770439, -82.392355),
-            scrollwheel: false
+            scrollwheel: false,
+            disableDefaultUI: true,
+            draggable: false,
+            mapTypeControl: false,
+            panControl: false,
+            rotateControl: false,
+            scaleControl: false,
+            zoomControl: false
         }
         var map = new google.maps.Map($container.get(0), mapOptions);
         var geocoder = new google.maps.Geocoder();
