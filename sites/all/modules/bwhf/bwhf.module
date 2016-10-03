@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the BWHF feature.
+ */
+
+include_once 'bwhf.features.inc';
