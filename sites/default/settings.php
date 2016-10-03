@@ -618,6 +618,8 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
 # $conf['theme_debug'] = TRUE;
 
 
+$conf['MAILCHIMP_API_KEY'] = 'c790ae415cf1090c70620dbd86f4c39c-us12';
+
 // Local development configuration.
 if (!defined('PANTHEON_ENVIRONMENT')) {
   // Database.

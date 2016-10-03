@@ -1,0 +1,80 @@
+<?php
+
+/**
+ * Implements hook_libraries_info().
+ */
+function custom_newsletter_libraries_info() {
+  $libraries['mailchimp'] = array(
+    'name' => 'MailChimp API',
+    'vendor url' => 'https://github.com/thinkshout/mailchimp-api-php',
+    'download url' => 'https://github.com/thinkshout/mailchimp-api-php/archive/v1.0.3.zip',
+    'version arguments' => array(
+      'file' => 'composer.json',
+      'pattern' => '/"version": "([0-9a-zA-Z.-]+)"/',
+    ),
+    'files' => array(
+      'php' => array(
+        'src/Mailchimp.php',
+        'src/MailchimpAPIException',
+        'src/MailchimpCampaigns.php',
+        'src/MailchimpLists.php',
+        'src/MailchimpReports.php',
+        'src/MailchimpTemplates.php',
+        'vendor/autoload.php',
+      ),
+    ),
+  );
+
+  return $libraries;
+}
+
+function custom_newsletter_webform_submission_insert($node, $submission) {
+  global $conf;
+  $list_id = array(
+    'pulse'=>'9c2b6d5dd4',
+    'events'=>'3208c9d7fc',
+    'dreamhome'=>'cde01e6154'
+  );
+  
+  if ($node->nid == 38) {
+    $mapping = _custom_newsletter_webform_component_mapping($node);
+    $fname = $submission->data[$mapping['first_name']][0];
+    $lname = $submission->data[$mapping['last_name']][0];
+    $email = $submission->data[$mapping['email']][0];
+    $categories = $submission->data[$mapping['categories']];
+    
+    //subscribe to list in mailchimp
+    if (($library = libraries_load('mailchimp')) && !empty($library['loaded'])) {
+      $mc = new \Mailchimp\MailchimpLists($conf['MAILCHIMP_API_KEY']);
+      
+      if (in_array('pulse', $categories)) {
+        try {
+          $mc->addMember($list_id['pulse'], $email, array('status'=>'subscribed', 'FNAME'=>$fname, 'LNAME'=>$lname));
+        } catch (Exception $e) {
+        }
+      }
+      if (in_array('events', $categories)) {
+        try {
+          $mc->addMember($list_id['events'], $email, array('status'=>'subscribed', 'FNAME'=>$fname, 'LNAME'=>$lname));
+        } catch (Exception $e) {
+        }
+      }
+      if (in_array('dreamhome', $categories)) {
+        try {
+          $mc->addMember($list_id['dreamhome'], $email, array('status'=>'subscribed', 'FNAME'=>$fname, 'LNAME'=>$lname));
+        } catch (Exception $e) {
+        }
+      }
+    }
+  }
+}
+
+function _custom_newsletter_webform_component_mapping($node) {
+  $mapping = array();
+  $components = $node->webform['components'];
+  foreach ($components as $i => $component) {
+    $key = $component['form_key'];
+    $mapping[$key] = $i;
+  }
+  return $mapping;
+}
