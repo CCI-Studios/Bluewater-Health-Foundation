@@ -257,9 +257,18 @@
 {
   margin-top: 1.5em;
 }
-.node-events .field-image
+.node-events
 {
-  display: block;
-  max-width: 100%;
-  height: auto;
+  .field-image
+  {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  .field-label
+  {
+    font-weight: 600;
+    color: $blue;
+    font-size: 1.15em;
+  }
 }

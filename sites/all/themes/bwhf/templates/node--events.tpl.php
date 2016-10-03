@@ -97,10 +97,17 @@ $image_url = image_style_url("cropped_thumbnail", $content['field_image']['#item
   </a>
 <?php else: ?>
   <div class="content"<?php print $content_attributes; ?>>
-    <p class="submitted">
-      <?php print render($content['field_date']); ?>
-    </p>
     <p><img src="<?php print $image_url;?>" class="field-image"></p>
+    <p class="field-date">
+      <div class="field-label">Date</div>
+      <div class="field-value"><?php print render($content['field_date']); ?></div>
+    </p>
+    <?php if (isset($content['field_location'])): ?>
+      <p class="field-location">
+        <div class="field-label">Location</div>
+        <div class="field-value"><?php print render($content['field_location']); ?></div>
+      </p>
+    <?php endif; ?>
     <?php print render($content['body']); ?>
     <div class="node--event--back"><a href="/events" class="button">Back to Events</a></div>
   </div>
