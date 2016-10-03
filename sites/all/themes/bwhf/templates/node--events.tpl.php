@@ -100,7 +100,7 @@ $image_url = image_style_url("cropped_thumbnail", $content['field_image']['#item
     <p><img src="<?php print $image_url;?>" class="field-image"></p>
     <p class="field-date">
       <div class="field-label">Date</div>
-      <div class="field-value"><?php print render($content['field_date']); ?></div>
+      <div class="field-value"><?php print render($content['field_event_date']); ?></div>
     </p>
     <?php if (isset($content['field_location'])): ?>
       <p class="field-location">
