@@ -12,13 +12,15 @@
     var events = [];
     $container.find(".views-row").each(function(){
       var title = $(this).find(".views-field-title").text().trim();
-      var date = $(this).find(".views-field-field-date").text().trim();
+      var date = $(this).find(".views-field-field-event-date").text().trim();
       var url = $(this).find(".views-field-path").text().trim();
-      events.push({
-        title: title,
-        start: date,
-        url: url,
-      });
+      if (date) {
+        events.push({
+          title: title,
+          start: date,
+          url: url,
+        });
+      }
     });
     fullCalendar = $container.fullCalendar({
       events: events,

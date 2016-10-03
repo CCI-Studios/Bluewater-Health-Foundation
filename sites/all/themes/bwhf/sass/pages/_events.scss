@@ -267,12 +267,22 @@
   }
   .field-label
   {
-    font-weight: 600;
     color: $blue;
-    font-size: 1.15em;
+    font-size: 1.25em;
   }
   .date-display-range
   {
     display: inline;
+  }
+  .field-date,
+  .field-location
+  {
+    color: $blue;
+    font-size: 1.15em;
+    margin-bottom: 0.8em;
+  }
+  .field-description.field-label
+  {
+    font-size: 1.4375em;
   }
 }
