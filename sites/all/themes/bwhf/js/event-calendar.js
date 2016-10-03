@@ -12,8 +12,8 @@
     var events = [];
     $container.find(".views-row").each(function(){
       var title = $(this).find(".views-field-title").text().trim();
-      var start = $(this).find(".views-field-field-event-date .date-display-start").text().trim();
-      var end = $(this).find(".views-field-field-event-date .date-display-end").text().trim();
+      var start = $(this).find(".start-date").text().trim();
+      var end = $(this).find(".end-date").text().trim();
       var url = $(this).find(".views-field-path").text().trim();
       if (start) {
         events.push({
