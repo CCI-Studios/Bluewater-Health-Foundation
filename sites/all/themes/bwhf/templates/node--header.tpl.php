@@ -79,7 +79,7 @@
  *
  * @ingroup themeable
  */
-$image_url = file_create_url($content['field_background_image']['#items'][0]['uri']);
+$image_url = image_style_url("header_background", $content['field_background_image']['#items'][0]['uri']);
 ?>
 <div class="node-<?php print $node->nid; ?> <?php print $classes; ?>"<?php print $attributes; ?>>
 

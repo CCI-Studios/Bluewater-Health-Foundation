@@ -79,7 +79,7 @@
  *
  * @ingroup themeable
  */
-$image_url = file_create_url($content['field_image']['#items'][0]['uri']);
+$image_url = image_style_url("cropped_thumbnail", $content['field_image']['#items'][0]['uri']);
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
