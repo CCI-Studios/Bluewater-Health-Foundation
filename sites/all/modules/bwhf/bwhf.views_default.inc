@@ -657,7 +657,7 @@ function bwhf_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Bluewater Health Foundation Partners';
+  $handler->display->display_options['title'] = '<none>';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -705,9 +705,8 @@ function bwhf_views_default_views() {
     'partner' => 'partner',
   );
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'partners';
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block_1');
   $export['partners'] = $view;
 
   $view = new view();
