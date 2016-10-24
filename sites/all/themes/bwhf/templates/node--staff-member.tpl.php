@@ -80,6 +80,7 @@
  * @ingroup themeable
  */
 $image_url = image_style_url("staff", $content['field_staff_photo']['#items'][0]['uri']);
+$isBoardMember = isset($content['field_staff_or_board_member']) && $content['field_staff_or_board_member']['#items'][0]['tid'] == 2;
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
@@ -98,7 +99,7 @@ $image_url = image_style_url("staff", $content['field_staff_photo']['#items'][0]
     </div></div>
   <?php else: ?>
     <div class="staff__profile"><div>
-      <a href="/staff" class="close">Back</a>
+      <a href="/staff<?php if($isBoardMember){echo "#block-views-staff-block-board";} ?>" class="close">Back</a>
       <div class="field-photo">
         <img src="<?php print $image_url;?>" alt="<?php print $title; ?>"/>
       </div>
