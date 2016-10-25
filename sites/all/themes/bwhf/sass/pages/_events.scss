@@ -331,9 +331,41 @@
   z-index: 1001;
 }
 
-.page-events .page-title
+.events-header
 {
-  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 480px;
+  position: relative;
+  border-bottom: 2px solid $blue;
+  
+  & > div
+  {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    padding: 0 25px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  &
+  {
+    @media screen and (max-width: 760px)
+    {
+      height: 0;
+      padding-bottom: 61%;
+    }
+  }
+  
+  h1
+  {
+    color: white;
+    text-shadow: 0 0 4px black;
+    text-align: center;
+  }
 }
 .node--event--back
 {

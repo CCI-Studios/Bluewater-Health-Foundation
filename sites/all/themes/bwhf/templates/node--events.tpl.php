@@ -80,6 +80,7 @@
  * @ingroup themeable
  */
 $image_url = image_style_url("cropped_thumbnail", $content['field_image']['#items'][0]['uri']);
+$full_image_url = file_create_url($content['field_image']['#items'][0]['uri']);
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
@@ -96,8 +97,10 @@ $image_url = image_style_url("cropped_thumbnail", $content['field_image']['#item
     </div>
   </a>
 <?php else: ?>
+  <div class="events-header" style="background-image:url('<?php print $full_image_url;?>');">
+    <div class="title"><h1><?php print $title; ?></h1></div>
+  </div>
   <div class="content"<?php print $content_attributes; ?>>
-    <p><img src="<?php print $image_url;?>" class="field-image"></p>
     <div class="field-date">
       <div class="field-label">Date &amp; Time:</div>
       <div class="field-value"><?php print render($content['field_event_date']); ?></div>

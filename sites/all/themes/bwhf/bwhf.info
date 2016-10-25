@@ -14,6 +14,7 @@ scripts[] = js/lightbox.min.js
 scripts[] = js/moment.min.js
 scripts[] = js/fullcalendar.min.js
 scripts[] = js/event-calendar.js
+scripts[] = js/event-header.js
 scripts[] = js/mobile-menu.js
 
 stylesheets[all][] = css/slick.css
