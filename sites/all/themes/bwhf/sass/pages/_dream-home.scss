@@ -13,6 +13,7 @@
     top: 50%;
     width: 100%;
     -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
   
@@ -638,6 +639,7 @@
       right: 20px;
       top: 50%;
       -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
       transform: translateY(-50%);
     }
     .field-title
@@ -673,6 +675,7 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.60);
     background: white;
     -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
     z-index: 1002;
     
