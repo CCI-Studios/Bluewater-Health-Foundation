@@ -440,21 +440,19 @@
   }
   .views-grouping
   {
-    width: 21%;
+    width: 29.33%;
     margin: 0 2%;
     float: left;
     
     &
     {
-      @media screen and (max-width: 760px)
+      @media screen and (max-width: 640px)
       {
-        width: 46%;
+        float: none;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: 30px;
-
-        &:nth-child(2n+1)
-        {
-          clear: left;
-        }
       }
     }
   }
