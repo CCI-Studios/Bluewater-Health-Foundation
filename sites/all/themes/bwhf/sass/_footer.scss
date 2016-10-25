@@ -214,6 +214,11 @@
       background-image: url(../img/social-tw-white.svg);
       width: 30px;
     }
+    .ig
+    {
+      background-image: url(../img/social-ig-white.svg);
+      width: 30px;
+    }
     .yt
     {
       background-image: url(../img/social-yt-white.svg);
@@ -231,6 +236,7 @@
 }
 .block__footer-search
 {
+  display: none;
   float: left;
   margin-top: 10px;
   

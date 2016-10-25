@@ -181,6 +181,13 @@
       margin-right: 14px;
       vertical-align: top;
       
+      &
+      {
+        @media screen and (max-width: 390px)
+        {
+          margin-right: 10px;
+        }
+      }
       &.last
       {
         margin-right: 0;
@@ -220,6 +227,16 @@
       &:hover, &:after
       {
         background-image: url(../img/social-tw-green.svg);
+      }
+    }
+    .ig
+    {
+      background-image: url(../img/social-ig-blue.svg);
+      width: 30px;
+      
+      &:hover, &:after
+      {
+        background-image: url(../img/social-ig-green.svg);
       }
     }
     .yt
