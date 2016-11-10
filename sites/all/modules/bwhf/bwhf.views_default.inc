@@ -972,8 +972,16 @@ function bwhf_views_default_views() {
   $handler->display->display_options['relationships']['nodequeue_rel']['required'] = TRUE;
   $handler->display->display_options['relationships']['nodequeue_rel']['limit'] = 1;
   $handler->display->display_options['relationships']['nodequeue_rel']['names'] = array(
-    'staff_members' => 'staff_members',
+    'staff_and_board_members' => 'staff_and_board_members',
     'headers' => 0,
+    'staff_members' => 0,
+    'partners' => 0,
+    'urgent_needs' => 0,
+    'volunteer_features' => 0,
+    'volunteer_videos' => 0,
+    'dream_home_early_bird_prizes' => 0,
+    'stories' => 0,
+    'our_donors' => 0,
   );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
