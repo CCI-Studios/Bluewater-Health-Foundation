@@ -378,7 +378,7 @@ function bwhf_views_default_views() {
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['exclude'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  /* Field: Content: Background Image */
+  /* Field: Field: Background Image */
   $handler->display->display_options['fields']['field_background_image']['id'] = 'field_background_image';
   $handler->display->display_options['fields']['field_background_image']['table'] = 'field_data_field_background_image';
   $handler->display->display_options['fields']['field_background_image']['field'] = 'field_background_image';

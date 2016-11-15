@@ -1,10 +1,38 @@
-.block__header-dream-home
+.block__header-dream-home .bean-dream-home-background
 {
   height: 350px;
-  background: url(../img/dream-home.jpg) no-repeat center center;
+  background: no-repeat center center;
   background-size: cover;
   border-bottom: 2px solid $blue;
   position: relative;
+  
+  &:before
+  {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.4;
+    z-index: 0;
+    background: $green;
+  }
+  &:after
+  {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.7;
+    z-index: 0;
+    background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
+  }
   
   & > div
   {
@@ -12,6 +40,7 @@
     left: 0;
     top: 50%;
     width: 100%;
+    z-index: 1;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);

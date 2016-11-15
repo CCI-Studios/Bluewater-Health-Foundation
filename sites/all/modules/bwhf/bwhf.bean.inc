@@ -13,6 +13,15 @@ function bwhf_bean_admin_ui_types() {
   $bean_type = new stdClass();
   $bean_type->disabled = FALSE; /* Edit this to true to make a default bean_type disabled initially */
   $bean_type->api_version = 5;
+  $bean_type->name = 'dream_home_background';
+  $bean_type->label = 'Dream Home Background';
+  $bean_type->options = '';
+  $bean_type->description = '';
+  $export['dream_home_background'] = $bean_type;
+
+  $bean_type = new stdClass();
+  $bean_type->disabled = FALSE; /* Edit this to true to make a default bean_type disabled initially */
+  $bean_type->api_version = 5;
   $bean_type->name = 'dream_home_cash_prizes';
   $bean_type->label = 'Dream Home Cash Prizes';
   $bean_type->options = '';
