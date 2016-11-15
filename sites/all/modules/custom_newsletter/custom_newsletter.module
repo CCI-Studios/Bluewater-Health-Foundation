@@ -29,7 +29,6 @@ function custom_newsletter_libraries_info() {
 }
 
 function custom_newsletter_webform_submission_insert($node, $submission) {
-  global $conf;
   $list_id = array(
     'pulse'=>'9c2b6d5dd4',
     'events'=>'3208c9d7fc',
@@ -45,7 +44,8 @@ function custom_newsletter_webform_submission_insert($node, $submission) {
     
     //subscribe to list in mailchimp
     if (($library = libraries_load('mailchimp')) && !empty($library['loaded'])) {
-      $mc = new \Mailchimp\MailchimpLists($conf['MAILCHIMP_API_KEY']);
+      $apikey = variable_get('mailchimp_api_key');
+      $mc = new \Mailchimp\MailchimpLists($apikey);
       
       if (in_array('pulse', $categories)) {
         try {
