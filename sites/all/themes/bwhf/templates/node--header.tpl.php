@@ -80,13 +80,17 @@
  * @ingroup themeable
  */
 $image_url = image_style_url("header_background", $content['field_background_image']['#items'][0]['uri']);
+$button_text = isset($content['field_button_text'][0])?$content['field_button_text'][0]['#markup']:"";
+$button_link = isset($content['field_button_link'][0])?$content['field_button_link'][0]['#markup']:"";
 ?>
 <div class="node-<?php print $node->nid; ?> <?php print $classes; ?>"<?php print $attributes; ?>>
 
   <div class="background" style="background-image:url('<?php print $image_url;?>');"><div>
     <div class="title"><h2><?php print $title; ?></h2></div>
     <?php print render($content['body']); ?>
-    <div class="give-now-container"><a href="/give-now" class="give-now">Give Now</a></div>
+    <?php if ($button_text && $button_link): ?>
+        <div class="give-now-container"><a href="<?php echo $button_link;?>" class="give-now"><?php echo $button_text;?></a></div>
+    <?php endif; ?>
   </div></div>
 
 </div>
