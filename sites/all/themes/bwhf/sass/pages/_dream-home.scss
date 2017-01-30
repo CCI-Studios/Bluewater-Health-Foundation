@@ -638,6 +638,25 @@
 }
 .node-dream-home-early-bird-prize
 {
+  overflow: hidden;
+  
+  .field-winner
+  {
+    position: absolute;
+    left: -42px;
+    top: 25px;
+    background: $green;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 30px;
+    height: 30px;
+    font-size: 1.5em;
+    color: white;
+    padding: 0 50px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.25);
+    -webkit-transform: rotate(-40deg);
+    transform: rotate(-40deg);
+  }
   .teaser
   {
     position: relative;

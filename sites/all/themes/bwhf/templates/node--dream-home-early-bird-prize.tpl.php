@@ -80,11 +80,15 @@
  * @ingroup themeable
  */
 $image_url = image_style_url("cropped_thumbnail", $content['field_image']['#items'][0]['uri']);
+$winner = $content['field_winner']['#items'][0]['value'];
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <div class="teaser">
     <a href="#" class="background" style="background-image:url(<?php print $image_url;?>);">
+      <?php if ($winner): ?>
+        <div class="field-winner">Winner</div>
+      <?php endif;?>
       <div class="content"<?php print $content_attributes; ?>>
         <div class="field-title">
           <?php print $title; ?>
