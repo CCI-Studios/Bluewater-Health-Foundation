@@ -14,5 +14,8 @@
         adaptiveHeight: true,
       });
     }
+    $container.find("video").each(function(){
+      this.play();
+    });
   });
 })(jQuery);

@@ -29,6 +29,7 @@
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
+      z-index: 1;
     }
     &
     {
@@ -38,6 +39,20 @@
         padding-bottom: 61%;
       }
     }
+  }
+  video
+  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto !important;
+    height: auto !important;
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 0;
   }
   .title
   {

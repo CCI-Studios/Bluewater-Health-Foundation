@@ -79,7 +79,8 @@
  *
  * @ingroup themeable
  */
-$image_url = image_style_url("header_background", $content['field_background_image']['#items'][0]['uri']);
+$image_url = isset($content['field_background_image']['#items'][0])?image_style_url("header_background", $content['field_background_image']['#items'][0]['uri']):"";
+$video_url = isset($content['field_background_video'][0])?file_create_url($content['field_background_video']['#items'][0]['uri']):"";
 $button_text = isset($content['field_button_text'][0])?$content['field_button_text'][0]['#markup']:"";
 $button_link = isset($content['field_button_link'][0])?$content['field_button_link'][0]['#markup']:"";
 ?>
@@ -91,6 +92,11 @@ $button_link = isset($content['field_button_link'][0])?$content['field_button_li
     <?php if ($button_text && $button_link): ?>
         <div class="give-now-container"><a href="<?php echo $button_link;?>" class="give-now"><?php echo $button_text;?></a></div>
     <?php endif; ?>
+    
   </div></div>
+  
+  <?php if ($video_url): ?>
+    <video src="<?php print $video_url;?>" autoplay loop muted></video>
+  <?php endif; ?>
 
 </div>
