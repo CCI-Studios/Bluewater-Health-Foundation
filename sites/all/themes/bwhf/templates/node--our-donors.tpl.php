@@ -95,6 +95,8 @@ $image_url = image_style_url("cropped_thumbnail", $content['field_image']['#item
 <?php else: ?>
   <div class="content"<?php print $content_attributes; ?>>
     <?php print render($content['body']); ?>
+    <br>
+    <p><a href="/our-donors" class="button">Back to Donors</a></p>
   </div>
 <?php endif; ?>
 
