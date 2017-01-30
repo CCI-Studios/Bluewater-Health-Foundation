@@ -80,7 +80,7 @@
  * @ingroup themeable
  */
 $image_url = image_style_url("cropped_thumbnail", $content['field_image']['#items'][0]['uri']);
-$winner = $content['field_winner']['#items'][0]['value'];
+$winner = isset($content['field_winner'])?$content['field_winner']['#items'][0]['value']:0;
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
