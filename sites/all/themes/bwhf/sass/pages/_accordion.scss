@@ -1,0 +1,101 @@
+.paragraphs-items-field-accordion
+{
+  clear: both;
+  padding-top: 30px;
+}
+.paragraphs-item-accordion
+{
+  border-bottom: 2px solid $blue;
+  
+  .field-name-field-accordion-title
+  {
+    display: block;
+    cursor: pointer;
+    color: $blue;
+    padding: 15px 210px 15px 20px;
+    line-height: 1;
+    position: relative;
+    text-decoration: none;
+    font-weight: 600;
+    
+    &
+    {
+      @media screen and (max-width: 540px)
+      {
+        padding-right: 20px;
+      }
+    }
+    a
+    {
+      text-decoration: none;
+    }
+    h2
+    {
+      margin-bottom: 0;
+    }
+  }
+  .field-name-field-body
+  {
+    display: none;
+    padding: 0 20px 20px 20px;
+  }
+  .accordion-toggle
+  {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    height: 1em;
+    margin-top: -0.5em;
+    padding-left: 22px;
+    font-size: 0.65em;
+    
+    &:before
+    {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -5px;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 10px solid $blue;
+    }
+    &
+    {
+      @media screen and (max-width: 540px)
+      {
+        display: block;
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-top: 0.5em;
+      }
+    }
+  }
+  .accordion-toggle--collapse
+  {
+    display: none;
+    
+    &:before
+    {
+      border-top: 0;
+      border-bottom: 10px solid $blue;
+    }
+  }
+  &.open
+  {
+    .accordion-toggle--collapse
+    {
+      display: block;
+    }
+    .accordion-toggle--expand
+    {
+      display: none;
+    }
+  }
+}
+.field-item:first-child .field-name-field-accordion-title
+{
+  border-top: 2px solid $blue;
+}

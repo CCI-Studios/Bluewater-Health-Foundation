@@ -145,6 +145,14 @@ function bwhf_image_default_styles() {
  */
 function bwhf_node_info() {
   $items = array(
+    'accordion_page' => array(
+      'name' => t('Accordion page'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'dream_home_basic_page' => array(
       'name' => t('Dream Home Basic Page'),
       'base' => 'node_content',
@@ -275,5 +283,19 @@ function bwhf_node_info() {
     ),
   );
   drupal_alter('node_info', $items);
+  return $items;
+}
+
+/**
+ * Implements hook_paragraphs_info().
+ */
+function bwhf_paragraphs_info() {
+  $items = array(
+    'accordion' => array(
+      'name' => 'Accordion item',
+      'bundle' => 'accordion',
+      'locked' => '1',
+    ),
+  );
   return $items;
 }
