@@ -1,0 +1,12 @@
+{
+    "name": "cci-studios/bluewater-health-foundation",
+    "authors": [
+        {
+            "name": "Chris Morris",
+            "email": "cmorris@ccistudios.com"
+        }
+    ],
+    "require": {
+        "drush/drush": "^8.0"
+    }
+}
