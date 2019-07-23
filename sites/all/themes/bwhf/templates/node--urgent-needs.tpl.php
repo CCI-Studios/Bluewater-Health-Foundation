@@ -89,16 +89,7 @@ $image_url = image_style_url("urgent_needs", $content['field_image']['#items'][0
   <div class="content"<?php print $content_attributes; ?>>
     <div class="field-title"><h2><?php print $title; ?></h2></div>
     <div class="field-department">
-      <?php if ($sticky): ?>
-        <div class="field-label">Department: </div>
-      <?php endif; ?>
       <?php print render($content['field_department']); ?>
-    </div>
-    <div class="field-cost">
-      <?php if ($sticky): ?>
-        <div class="field-label">Cost: </div>
-      <?php endif; ?>
-      <?php print render($content['field_cost']); ?>
     </div>
     <?php if ($sticky): ?>
       <div class="field-body"><?php print render($content['body']); ?></div>
