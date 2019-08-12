@@ -56,16 +56,6 @@
     font-size: 2.25em;
     margin-bottom: 5px;
     line-height: 1;
-    
-    &:after
-    {
-      content: "";
-      display: block;
-      width: 100%;
-      max-width: 288px;
-      border-bottom: 1px solid $blue;
-      margin-top: 2px;
-    }
   }
   .field-department
   {
@@ -146,15 +136,6 @@
     padding-top: 20px;
     margin-bottom: 0;
     line-height: 1;
-    
-    &:after
-    {
-      content: "";
-      display: block;
-      width: 100px;
-      margin: 8px auto;
-      border-bottom: 1px solid $blue;
-    }
   }
   .field-department
   {
