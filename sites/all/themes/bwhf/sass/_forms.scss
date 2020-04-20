@@ -175,4 +175,15 @@ textarea
       padding-bottom: 0;
     }
   }
+  .webform-component-fieldset
+  {
+    border: 1px solid #ccc;
+    padding: 20px 15px;
+    border-radius: 2px;
+
+    legend
+    {
+      padding: 0 10px;
+    }
+  }
 }
