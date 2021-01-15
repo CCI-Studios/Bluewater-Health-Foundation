@@ -1,5 +1,25 @@
 # Change Log
 
+### 3.5.1 - 10 October 2020
+
+- Allow symfony/finder ^5 in output-formatters 3.x. (#87)
+
+### 3.5.0 - 30 May 2019
+
+- Add `@default-table-fields` to specify the fields to use with the table formatter and other "human readable" output formats.
+
+### 3.4.1 - 13 March 2019
+
+- Add enclosure and escape character options for CsvFormatter. (#79)
+
+### 3.4.0 - 19 October 2018
+
+- Add an UnstucturedInterface marker interface, and update the 'string' format to not accept data types that implement this interface unless they also implement StringTransformationInterface.
+
+### 3.3.2 - 18 October 2018
+
+- Add a 'null' output formatter that accepts all data types and never produces output
+
 ### 3.3.0 & 3.3.1 - 15 October 2018
 
 - Add UnstructuredListData and UnstructuredData to replace deprecated ListDataFromKeys
